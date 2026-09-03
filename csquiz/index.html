@@ -1,0 +1,3170 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSQuiz — 15,000+ Computer Science MCQs | Practice & Mock Tests (Free, Offline)</title>
+  <meta name="description"
+    content="Practice 15,000+ solved MCQs across 16 CS subjects — DBMS, OS, Java, Python, C, Computer Networks & more. Timed mock tests, detailed explanations with code blocks, offline mode. Free Android app, no login needed." />
+  <meta name="keywords"
+    content="CSQuiz, computer science MCQ, DBMS MCQs, Java MCQ, Python quiz, operating system MCQ, C programming questions, GATE CS preparation, mock test app, offline MCQ practice, computer science quiz, SQL MCQ, machine learning quiz, OOP questions, computer network MCQ, cyber security quiz" />
+  <link rel="canonical" href="https://nirvionlabs.github.io/csquiz/" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo8_dark.png">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <meta property="og:title" content="CSQuiz — 15,000+ Computer Science MCQs | Free Offline Practice App" />
+  <meta property="og:description"
+    content="Practice 15,000+ solved MCQs across 16 CS subjects. Timed mock tests, detailed explanations, daily streaks. No login needed, works offline." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <meta property="og:url" content="https://nirvionlabs.github.io/csquiz" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
+    rel="stylesheet" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CSQuiz — 15,000+ CS MCQs | Free Offline Practice" />
+  <meta name="twitter:description"
+    content="Practice 15,000+ solved MCQs across 16 CS subjects. Timed mock tests, detailed explanations, works offline. No login needed." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ["Sora", "sans-serif"],
+            body: ["DM Sans", "sans-serif"],
+          },
+          colors: {
+            primary: {
+              50: "#eff6ff",
+              100: "#dbeafe",
+              200: "#bfdbfe",
+              400: "#60a5fa",
+              500: "#3B82F6",
+              600: "#2563eb",
+              700: "#1d4ed8",
+              800: "#1e40af",
+              900: "#1e3a8a",
+            },
+            navy: {
+              900: "#050d1a",
+              800: "#0a1628",
+              700: "#0f2040",
+              600: "#162d54",
+            },
+          },
+          animation: {
+            "fade-up": "fadeUp 0.6s ease forwards",
+            "fade-in": "fadeIn 0.5s ease forwards",
+            float: "float 6s ease-in-out infinite",
+            "float-delayed": "float 6s ease-in-out 2s infinite",
+            "pulse-glow": "pulseGlow 3s ease-in-out infinite",
+          },
+          keyframes: {
+            fadeUp: {
+              "0%": { opacity: "0", transform: "translateY(28px)" },
+              "100%": { opacity: "1", transform: "translateY(0)" },
+            },
+            fadeIn: {
+              "0%": { opacity: "0" },
+              "100%": { opacity: "1" },
+            },
+            float: {
+              "0%, 100%": { transform: "translateY(0px)" },
+              "50%": { transform: "translateY(-12px)" },
+            },
+            pulseGlow: {
+              "0%, 100%": { boxShadow: "0 0 20px rgba(59,130,246,0.3)" },
+              "50%": { boxShadow: "0 0 50px rgba(59,130,246,0.6)" },
+            },
+          },
+        },
+      },
+    };
+  </script>
+  <!-- ============================================================
+  PASTE ALL OF THIS just before the closing </head> tag
+  in your csquiz/index.html
+  ============================================================ -->
+
+
+  <!-- Schema 1: WebSite — helps Google understand the brand/site -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "CSQuiz",
+  "url": "https://nirvionlabs.github.io/csquiz/",
+  "description": "Practice 15,000+ solved MCQs across 16 CS subjects. Timed mock tests, detailed explanations, offline mode. Free Android app, no login needed.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Nirvion Labs",
+    "url": "https://nirvionlabs.github.io/csquiz/",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "nirvionlabs@gmail.com",
+      "contactType": "customer support"
+    }
+  }
+}
+</script>
+
+
+  <!-- Schema 2: MobileApplication — tells Google this is an Android app -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "CSQuiz — Computer Science MCQs",
+  "description": "Practice 15,000+ solved MCQs across 16 CS subjects including DBMS, OS, Java, Python, C, Computer Networks, Cyber Security, Machine Learning and more. Timed mock tests, detailed explanations with code blocks, offline mode. No login needed.",
+  "url": "https://nirvionlabs.github.io/csquiz/",
+  "applicationCategory": "EducationApplication",
+  "operatingSystem": "Android",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.nirvionlabs.csquiz",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Nirvion Labs"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "ratingCount": "50",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "featureList": [
+    "15000+ solved MCQs with explanations",
+    "16 computer science subjects",
+    "Timed mock test mode",
+    "Offline mode — no internet needed after download",
+    "Smart bookmarks",
+    "Daily study streak tracking",
+    "No login or account required",
+    "Performance dashboard"
+  ],
+  "screenshot": [
+    "https://nirvionlabs.github.io/csquiz/assets/home_page_dark.png",
+    "https://nirvionlabs.github.io/csquiz/assets/practice_page_with_explanation_dark.png",
+    "https://nirvionlabs.github.io/csquiz/assets/test_taking_page.png"
+  ]
+}
+</script>
+
+
+  <!-- Schema 3: FAQPage — can trigger FAQ accordion in Google results -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is CSQuiz completely free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CSQuiz is free to download and use. The app is ad-free for the first 24 hours. After that, banner ads appear on practice and test pages, and occasional interstitial ads show between topics (capped at one every 3 minutes). You get 3 free tests per day — watch a short video ad to unlock more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I practice CS MCQs offline without internet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Download any subject once and practice entirely offline. Your progress, bookmarks, and test history are stored locally on your device. The app only needs internet to download new subjects or check for content updates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which computer science subjects are available in CSQuiz?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CSQuiz currently includes 16 subjects with over 15,000 solved MCQs: C Programming (1591), Object Oriented Programming (1350), Java Programming (1335), Computer Networks (1219), Python Programming (1188), Operating Systems (1121), Computer Fundamentals (1000), Cyber Security (1000), Cloud Computing (990), DBMS (871), Linux (847), Automata Theory (832), Artificial Intelligence (765), Computer Architecture (749), SQL (639), and Machine Learning (620). New subjects are added regularly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is CSQuiz useful for GATE CS preparation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CSQuiz covers all major GATE CS subjects including Operating Systems, DBMS, Computer Networks, Theory of Computation, and Computer Architecture. The timed test mode with configurable duration (10 to 120 minutes) simulates real exam conditions. However, CSQuiz is not officially affiliated with GATE or any examination board."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to create an account to use CSQuiz?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. CSQuiz works without any login, sign-up, or account creation. Install and start practicing immediately. Your progress is stored locally on your device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does CSQuiz provide explanations for MCQ answers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, every MCQ includes a detailed explanation. Explanations support code blocks and images where relevant, helping you understand the concept — not just memorize the answer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I take mock tests with a timer in CSQuiz?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. CSQuiz has a dedicated Test Mode where you can create custom tests — choose single or multiple subjects, select specific categories, set question count, and enable a timer from 10 to 120 minutes. Results show a detailed breakdown with correct, wrong, and unattempted counts plus explanations for every question."
+      }
+    }
+  ]
+}
+</script>
+
+  <style>
+    * {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: "Sora", sans-serif;
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 {
+      transition-delay: 0.1s;
+    }
+
+    .reveal-delay-2 {
+      transition-delay: 0.2s;
+    }
+
+    .reveal-delay-3 {
+      transition-delay: 0.3s;
+    }
+
+    .reveal-delay-4 {
+      transition-delay: 0.4s;
+    }
+
+    /* Feature card hover */
+    .feature-card {
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(59, 130, 246, 0.12);
+      border-color: rgba(59, 130, 246, 0.4);
+    }
+
+    .feature-card:hover .icon-wrap {
+      background: rgba(59, 130, 246, 0.15);
+    }
+
+    /* Screenshot card */
+    .screenshot-card {
+      transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+    }
+
+    .screenshot-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 30px 60px rgba(59, 130, 246, 0.2);
+    }
+
+    /* Step connector line */
+    .step-connector::after {
+      content: "";
+      position: absolute;
+      top: 28px;
+      left: calc(100% + 1px);
+      width: calc(100% - 2px);
+      height: 2px;
+      background: linear-gradient(90deg,
+          rgba(59, 130, 246, 0.5),
+          rgba(59, 130, 246, 0.1));
+    }
+
+    @media (max-width: 768px) {
+      .step-connector::after {
+        display: none;
+      }
+    }
+
+    /* Comparison table */
+    .compare-col {
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .compare-col:hover {
+      transform: translateY(-4px);
+    }
+
+    /* Glowing button */
+    .btn-primary {
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(59, 130, 246, 0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(59, 130, 246, 0.5);
+    }
+
+    .btn-secondary {
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(59, 130, 246, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* Scrollbar for horizontal scroll */
+    .scroll-container::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .scroll-container::-webkit-scrollbar-track {
+      background: rgba(59, 130, 246, 0.05);
+      border-radius: 2px;
+    }
+
+    .scroll-container::-webkit-scrollbar-thumb {
+      background: rgba(59, 130, 246, 0.3);
+      border-radius: 2px;
+    }
+
+    /* Stat counter */
+    .stat-card {
+      transition: transform 0.3s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+    }
+
+    /* Mobile mockup shimmer */
+    @keyframes shimmer {
+      0% {
+        background-position: -200% center;
+      }
+
+      100% {
+        background-position: 200% center;
+      }
+    }
+
+    .shimmer-line {
+      background: linear-gradient(90deg,
+          rgba(255, 255, 255, 0.03) 25%,
+          rgba(255, 255, 255, 0.08) 50%,
+          rgba(255, 255, 255, 0.03) 75%);
+      background-size: 200% 100%;
+      animation: shimmer 3s ease infinite;
+    }
+
+    /* Nav glass */
+    .nav-glass {
+      backdrop-filter: blur(20px);
+      background: rgba(5, 13, 26, 0.8);
+      border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+    }
+
+    /* Progress ring */
+    .progress-ring circle {
+      transition: stroke-dashoffset 1.5s ease;
+    }
+
+    /* Tag badge */
+    .badge {
+      background: linear-gradient(135deg,
+          rgba(59, 130, 246, 0.15),
+          rgba(37, 99, 235, 0.1));
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      backdrop-filter: blur(8px);
+    }
+
+    /* Divider gradient */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg,
+          transparent,
+          rgba(59, 130, 246, 0.2),
+          transparent);
+    }
+
+    /* CTA section */
+    .cta-bg {
+      background: linear-gradient(135deg,
+          #1e3a8a 0%,
+          #1e40af 40%,
+          #2563eb 100%);
+    }
+
+    /* Glow dot */
+    .glow-dot {
+      width: 8px;
+      height: 8px;
+      background: #3b82f6;
+      border-radius: 50%;
+      box-shadow: 0 0 12px rgba(59, 130, 246, 0.8);
+      animation: pulseGlow 2s ease-in-out infinite;
+    }
+
+    /* Icon wrap */
+    .icon-wrap {
+      background: rgba(59, 130, 246, 0.08);
+      border: 1px solid rgba(59, 130, 246, 0.15);
+      transition: background 0.3s ease;
+    }
+
+    /* App store button */
+    .store-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.3s ease;
+    }
+
+    .store-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(59, 130, 246, 0.4);
+      transform: translateY(-2px);
+    }
+
+    /* ─── DARK / LIGHT MODE ─── */
+    [data-theme="dark"] .bg-white {
+      background-color: #080e1a !important;
+    }
+
+    [data-theme="dark"] .bg-gray-50 {
+      background-color: #080e1a !important;
+    }
+
+    [data-theme="dark"] .feature-card {
+      background-color: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+
+    [data-theme="dark"] .feature-card:hover {
+      border-color: rgba(59, 130, 246, 0.45) !important;
+      box-shadow: 0 20px 60px rgba(59, 130, 246, 0.18) !important;
+    }
+
+    [data-theme="dark"] .stat-card {
+      background-color: #111827 !important;
+      border-color: rgba(59, 130, 246, 0.2) !important;
+    }
+
+    [data-theme="dark"] .compare-light {
+      background-color: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+
+    [data-theme="dark"] .text-gray-900 {
+      color: #f1f5f9 !important;
+    }
+
+    [data-theme="dark"] .text-gray-700 {
+      color: #cbd5e1 !important;
+    }
+
+    [data-theme="dark"] .text-gray-600 {
+      color: #94a3b8 !important;
+    }
+
+    [data-theme="dark"] .text-gray-500 {
+      color: #94a3b8 !important;
+    }
+
+    [data-theme="dark"] .text-gray-400 {
+      color: #64748b !important;
+    }
+
+    [data-theme="dark"] .bg-primary-50 {
+      background-color: rgba(59, 130, 246, 0.12) !important;
+    }
+
+    [data-theme="dark"] .border-primary-100 {
+      border-color: rgba(59, 130, 246, 0.28) !important;
+    }
+
+    [data-theme="dark"] .text-primary-700 {
+      color: #60a5fa !important;
+    }
+
+    [data-theme="dark"] .text-primary-600 {
+      color: #60a5fa !important;
+    }
+
+    [data-theme="dark"] .text-green-700 {
+      color: #4ade80 !important;
+    }
+
+    [data-theme="dark"] .text-purple-700 {
+      color: #c084fc !important;
+    }
+
+    [data-theme="dark"] .border-blue-100 {
+      border-color: rgba(59, 130, 246, 0.18) !important;
+    }
+
+    [data-theme="dark"] .border-green-100 {
+      border-color: rgba(34, 197, 94, 0.18) !important;
+    }
+
+    [data-theme="dark"] .border-purple-100 {
+      border-color: rgba(168, 85, 247, 0.18) !important;
+    }
+
+    [data-theme="dark"] .from-blue-50 {
+      --tw-gradient-from: rgba(59, 130, 246, 0.08) !important;
+    }
+
+    [data-theme="dark"] .from-green-50 {
+      --tw-gradient-from: rgba(34, 197, 94, 0.07) !important;
+    }
+
+    [data-theme="dark"] .from-purple-50 {
+      --tw-gradient-from: rgba(168, 85, 247, 0.07) !important;
+    }
+
+    [data-theme="dark"] .to-white {
+      --tw-gradient-to: #111827 !important;
+    }
+
+    [data-theme="dark"] .bg-blue-50 {
+      background-color: rgba(59, 130, 246, 0.1) !important;
+    }
+
+    [data-theme="dark"] .bg-green-50 {
+      background-color: rgba(34, 197, 94, 0.08) !important;
+    }
+
+    [data-theme="dark"] .bg-orange-50 {
+      background-color: rgba(251, 146, 60, 0.1) !important;
+    }
+
+    [data-theme="dark"] .border-orange-100 {
+      border-color: rgba(251, 146, 60, 0.2) !important;
+    }
+
+    [data-theme="dark"] .text-orange-600 {
+      color: #fb923c !important;
+    }
+
+    [data-theme="dark"] .bg-gray-100 {
+      background-color: #1e293b !important;
+    }
+
+    [data-theme="dark"] .border-gray-100 {
+      border-color: #1f2937 !important;
+    }
+
+    [data-theme="dark"] .bg-white\/4,
+    [data-theme="dark"] .bg-white\/5 {
+      background-color: rgba(255, 255, 255, 0.04) !important;
+    }
+
+    [data-theme="dark"] .progress-dash-wrap {
+      background: linear-gradient(135deg, #111827, #0f172a) !important;
+      border-color: #1f2937 !important;
+    }
+
+    [data-theme="dark"] .progress-inner-card {
+      background-color: #1e293b !important;
+      border-color: #334155 !important;
+    }
+
+    [data-theme="dark"] .bar-track-bg {
+      background-color: #1e293b !important;
+    }
+
+    [data-theme="dark"] .text-white\/10,
+    [data-theme="dark"] .border-white\/10 {
+      opacity: 0.15 !important;
+    }
+
+    /* ─── THEME TOGGLE BUTTON ─── */
+    .theme-toggle-btn {
+      position: relative;
+      width: 54px;
+      height: 28px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 14px;
+      cursor: pointer;
+      transition:
+        background 0.35s,
+        border-color 0.35s;
+      flex-shrink: 0;
+    }
+
+    .theme-toggle-btn:hover {
+      background: rgba(255, 255, 255, 0.13);
+      border-color: rgba(59, 130, 246, 0.4);
+    }
+
+    .theme-toggle-btn.is-light {
+      background: rgba(59, 130, 246, 0.18);
+      border-color: rgba(59, 130, 246, 0.38);
+    }
+
+    .toggle-thumb {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #e2e8f0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      transition:
+        transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+        background 0.3s;
+    }
+
+    .theme-toggle-btn.is-light .toggle-thumb {
+      transform: translateX(26px);
+      background: #3b82f6;
+    }
+
+    .toggle-moon {
+      position: absolute;
+      right: 7px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 13px;
+      height: 13px;
+      color: #94a3b8;
+      transition: opacity 0.2s;
+      pointer-events: none;
+    }
+
+    .toggle-sun {
+      position: absolute;
+      left: 7px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 13px;
+      height: 13px;
+      color: #fbbf24;
+      opacity: 0;
+      transition: opacity 0.2s;
+      pointer-events: none;
+    }
+
+    .theme-toggle-btn.is-light .toggle-moon {
+      opacity: 0;
+    }
+
+    .theme-toggle-btn.is-light .toggle-sun {
+      opacity: 1;
+    }
+
+    .toggle-label {
+      color: rgba(255, 255, 255, 0.45);
+      font-size: 11px;
+      font-family: "Sora", sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      user-select: none;
+      white-space: nowrap;
+      transition: color 0.3s;
+      min-width: 30px;
+      text-align: center;
+    }
+
+    /* ─── SCREENSHOTS REDESIGN ─── */
+    .screens-section {
+      background: linear-gradient(180deg,
+          #040b18 0%,
+          #06111f 60%,
+          #040b18 100%);
+    }
+
+    .screen-tab {
+      padding: 7px 16px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-family: "Sora", sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.42);
+      background: transparent;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .screen-tab:hover {
+      color: rgba(255, 255, 255, 0.7);
+      border-color: rgba(59, 130, 246, 0.3);
+      background: rgba(59, 130, 246, 0.07);
+    }
+
+    .screen-tab.active {
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      border-color: transparent;
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+    }
+
+    .phone-wrap {
+      width: 248px;
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 640px) {
+      .phone-wrap {
+        width: 272px;
+      }
+    }
+
+    .phone-frame {
+      width: 100%;
+      aspect-ratio: 9/19.5;
+      border-radius: 30px;
+      background: #09101f;
+      border: 2.5px solid rgba(255, 255, 255, 0.13);
+      box-shadow:
+        0 0 0 1px rgba(59, 130, 246, 0.1),
+        0 50px 100px rgba(0, 0, 0, 0.8),
+        0 0 70px rgba(59, 130, 246, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.07);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .phone-island {
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 88px;
+      height: 24px;
+      background: #000;
+      border-radius: 20px;
+      z-index: 10;
+    }
+
+    .screen-pane {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .screen-pane.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .sl {
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 5px;
+    }
+
+    .sl2 {
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 5px;
+    }
+
+    .slb {
+      background: rgba(59, 130, 246, 0.22);
+      border-radius: 5px;
+    }
+
+    .slg {
+      background: rgba(34, 197, 94, 0.2);
+      border-radius: 5px;
+    }
+
+    .slo {
+      background: rgba(251, 146, 60, 0.22);
+      border-radius: 5px;
+    }
+
+    .slr {
+      background: rgba(239, 68, 68, 0.18);
+      border-radius: 5px;
+    }
+
+    .screen-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.18);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .screen-dot.active {
+      background: #3b82f6;
+      width: 22px;
+      border-radius: 4px;
+      box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+    }
+
+    .feat-item {
+      opacity: 0;
+      transform: translateX(-12px);
+      transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+    }
+
+    .feat-item.vis {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .preview-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.9rem;
+      padding: 0.85rem 1rem;
+    }
+
+    .preview-toggle-copy {
+      text-align: left;
+    }
+
+    .preview-toggle-title {
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 0.9rem;
+      font-family: "Sora", sans-serif;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .preview-toggle-subtitle {
+      color: rgba(148, 163, 184, 0.9);
+      font-size: 0.74rem;
+      line-height: 1.2;
+      margin-top: 0.18rem;
+    }
+
+    .phone-screen-stage {
+      position: absolute;
+      inset: 0;
+      padding-top: 52px;
+      border-radius: inherit;
+      overflow: hidden;
+      transition: filter 0.35s ease;
+    }
+
+    .screenshot-screen {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .screenshot-screen.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .phone-frame {
+      transition:
+        background 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+    }
+
+    .screens-section[data-shot-theme="light"] .phone-frame {
+      background: linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+      border-color: rgba(148, 163, 184, 0.32);
+      box-shadow:
+        0 0 0 1px rgba(59, 130, 246, 0.08),
+        0 35px 80px rgba(15, 23, 42, 0.18),
+        0 0 48px rgba(59, 130, 246, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.85);
+    }
+
+    /* Removed filter - using actual light/dark images instead of inverting */
+    .screens-section[data-shot-theme="light"] .phone-island {
+      background: #0f172a;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15);
+    }
+
+    @media (max-width: 639px) {
+      .preview-toggle {
+        gap: 0.75rem;
+        padding: 0.75rem 0.9rem;
+      }
+
+      .preview-toggle-copy {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-white overflow-x-hidden">
+  <!-- ═══════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════ -->
+  <nav class="nav-glass fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-lg bg-primary-500 flex items-center justify-center">
+          <img src="./assets/logo8_dark.png" alt="CSQuiz Logo" class="object-cover" />
+        </div>
+        <span class="font-display font-700 text-white text-lg tracking-tight">CSQuiz</span>
+      </div>
+
+      <!-- Desktop nav links -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#features" class="text-sm text-gray-400 hover:text-white transition-colors font-medium">Features</a>
+        <a href="#subjects" class="text-sm text-gray-400 hover:text-white transition-colors font-medium">Subjects</a>
+        <a href="#preview-theme"
+          class="text-sm text-gray-400 hover:text-white transition-colors font-medium">Screenshots</a>
+        <a href="#how-it-works" class="text-sm text-gray-400 hover:text-white transition-colors font-medium">How It
+          Works</a>
+
+        <a href="#faq" class="text-sm text-gray-400 hover:text-white transition-colors font-medium">FAQ</a>
+      </div>
+
+      <!-- Right side CTA -->
+      <div class="hidden sm:flex items-center gap-4">
+        <!-- CTA -->
+        <a href="https://play.google.com/store/apps/details?id=com.nirvionlabs.csquiz"
+          class="btn-primary flex items-center gap-2 text-white text-sm font-semibold px-5 py-2.5 rounded-xl font-display">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M17.523 15.3414C17.523 15.3414 19.0 13.0 19.0 10.7C19.0 6.7 16.3 3.5 12.5 3.0L12.0 2.0C11.5 1.1 10.3 1.1 9.8 2.0L9.3 3.0C5.5 3.5 2.8 6.7 2.8 10.7C2.8 13.0 4.3 15.3414 4.3 15.3414L2.0 19.0L4.0 21.0L6.0 19.5C6.8 20.4 7.8 21.0 9.0 21.3V22.0H11.0H13.0V21.3C14.2 21.0 15.2 20.4 16.0 19.5L18.0 21.0L20.0 19.0L17.523 15.3414Z" />
+          </svg>
+          Download Free
+        </a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button onclick="
+            document.getElementById('mobile-menu').classList.toggle('hidden')
+          " class="md:hidden text-gray-400 hover:text-white p-1">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-5 pb-4 bg-navy-900 border-t border-white/5">
+      <div class="flex flex-col gap-4 pt-4">
+        <a href="#features" class="text-gray-300 font-medium">Features</a>
+        <a href="#subjects" class="text-gray-300 font-medium">Subjects</a>
+        <a href="#how-it-works" class="text-gray-300 font-medium">How It Works</a>
+        <a href="#faq" class="text-gray-300 font-medium">FAQ</a>
+        <a href="https://play.google.com/store/apps/details?id=com.nirvionlabs.csquiz"
+          class="btn-primary text-center text-white font-semibold py-3 rounded-xl">Download Free</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════════════ -->
+  <section class="relative flex min-h-0 items-start overflow-hidden pt-12 lg:min-h-screen lg:items-center lg:pt-16">
+    <div class="absolute inset-0 bg-[#050d1a]"></div>
+    <div
+      class="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_20%_40%,rgba(59,130,246,0.15)_0%,transparent_60%),radial-gradient(ellipse_60%_40%_at_80%_70%,rgba(37,99,235,0.10)_0%,transparent_50%),radial-gradient(ellipse_40%_30%_at_60%_20%,rgba(96,165,250,0.08)_0%,transparent_40%)]">
+    </div>
+    <div
+      class="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.04)_1px,transparent_1px)] bg-[length:60px_60px]">
+    </div>
+    <div
+      class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[length:7px_7px] opacity-40">
+    </div>
+
+    <div class="pointer-events-none absolute left-1/4 top-1/4 h-96 w-96 rounded-full bg-primary-500/8 blur-3xl"></div>
+    <div class="pointer-events-none absolute bottom-1/4 right-1/4 h-80 w-80 rounded-full bg-blue-700/8 blur-3xl"></div>
+
+    <div class="relative z-10 mx-auto w-full max-w-7xl px-5 pb-14 pt-11 sm:px-8 sm:pt-12 lg:py-20">
+      <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div class="relative z-10 mx-auto max-w-[40rem] text-center lg:mx-0 lg:text-left">
+          <div class="mb-8 inline-flex items-center gap-2 rounded-full px-4 py-1.5 badge animate-fade-up">
+            <div class="glow-dot"></div>
+            <span class="text-primary-400 text-sm font-semibold font-display tracking-wide">Free to Download</span>
+          </div>
+
+          <h1
+            class="mb-6 animate-fade-up text-[clamp(2.35rem,10vw,3.15rem)] leading-[1.1] tracking-tight text-white opacity-0 font-display font-800 sm:text-5xl lg:text-5xl xl:text-6xl [animation-delay:0.1s] [animation-fill-mode:both]">
+            Master Computer<br class="hidden sm:block" />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-blue-300">Science</span>
+            with <br class="hidden sm:block" />Structured MCQs
+          </h1>
+
+          <p
+            class="mb-7 max-w-lg animate-fade-up text-base leading-relaxed text-gray-400 opacity-0 mx-auto lg:mx-0 sm:mb-10 sm:text-xl [animation-delay:0.2s] [animation-fill-mode:both]">
+            Practice topic-wise MCQs, take timed tests, and track your
+            progress —
+            <span class="text-gray-300 font-medium">even offline.</span>
+          </p>
+
+          <div
+            class="flex flex-col justify-center gap-4 animate-fade-up opacity-0 sm:flex-row lg:justify-start [animation-delay:0.3s] [animation-fill-mode:both]">
+            <a href="https://play.google.com/store/apps/details?id=com.nirvionlabs.csquiz"
+              class="store-btn flex w-full items-center justify-center gap-3 rounded-2xl px-6 py-3.5 cursor-pointer sm:w-auto">
+              <svg class="w-7 h-7 flex-shrink-0" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M3.60952 1.29524C3.26667 1.64762 3.06667 2.19048 3.06667 2.9V21.1C3.06667 21.8095 3.26667 22.3524 3.60952 22.7048L3.7 22.7952L13.3619 13.1333V12.9V12.6667L3.7 3.00476L3.60952 1.29524Z"
+                  fill="#3B82F6" />
+                <path
+                  d="M16.5333 16.3048L13.3619 13.1333V12.9V12.6667L16.5429 9.49524L16.6524 9.5619L20.4286 11.7C21.5238 12.319 21.5238 13.3333 20.4286 13.9619L16.6524 16.1905L16.5333 16.3048Z"
+                  fill="#60A5FA" />
+                <path
+                  d="M16.6619 16.1905L13.3619 12.9L3.60952 22.7048C3.95238 23.0762 4.52381 23.119 5.17143 22.7619L16.6619 16.1905Z"
+                  fill="#1E40AF" />
+                <path
+                  d="M16.6619 9.60952L5.17143 3.04762C4.52381 2.67143 3.95238 2.72381 3.60952 3.09524L13.3619 12.9L16.6619 9.60952Z"
+                  fill="#2563EB" />
+              </svg>
+              <div class="text-left">
+                <div class="text-gray-400 text-xs leading-none mb-0.5">
+                  GET IT ON
+                </div>
+                <div class="text-white font-semibold font-display text-base leading-tight">
+                  Google Play
+                </div>
+              </div>
+            </a>
+
+            <a href="#features"
+              class="btn-secondary flex w-full items-center justify-center gap-2 rounded-2xl border border-white/10 px-7 py-3.5 text-white font-semibold font-display sm:w-auto hover:bg-white/5 transition-colors">
+              Explore Features
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+          </div>
+
+          <div
+            class="mt-10 flex flex-wrap items-center justify-center gap-x-4 gap-y-3 animate-fade-up opacity-0 lg:justify-start sm:gap-x-6 [animation-delay:0.4s] [animation-fill-mode:both]">
+            <span class="text-gray-400 text-sm">15,000+ Solved MCQs</span>
+            <div class="hidden h-4 w-px bg-white/10 sm:block"></div>
+            <span class="text-gray-400 text-sm">No login needed</span>
+            <div class="hidden h-4 w-px bg-white/10 sm:block"></div>
+            <span class="text-gray-400 text-sm">Great user experience</span>
+          </div>
+        </div>
+
+        <div
+          class="relative w-full max-w-[280px] sm:max-w-[420px] lg:max-w-[480px] xl:max-w-[520px] mx-auto lg:mr-0 lg:ml-auto mt-12 lg:mt-0 opacity-0 animate-fade-up [animation-delay:0.3s] [animation-fill-mode:both]">
+          <div class="absolute inset-0 bg-blue-500/20 blur-[80px] rounded-full z-0 lg:left-12 lg:-right-4"></div>
+
+          <div
+            class="hidden sm:block absolute left-0 bottom-4 w-[60%] lg:w-[58%] z-[1] -rotate-6 animate-float [animation-delay:1s]">
+            <div
+              class="relative aspect-[9/19.5] w-full overflow-hidden rounded-[1.75rem] border-[5px] border-[#2d3548] bg-[#0a0f18] shadow-[0_20px_60px_rgba(0,0,0,0.6)] brightness-75 transition-all duration-300 hover:brightness-100 hover:-translate-y-2">
+              <img src="./assets/practice_page_with_explanation_dark.png" alt="App Practice Screen"
+                class="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          <div class="relative z-[3] w-full sm:w-[70%] lg:w-[65%] ml-auto animate-float">
+            <div
+              class="relative aspect-[9/19.5] w-full overflow-hidden rounded-[1.75rem] border-[5px] border-[#2d3548] bg-[#0a0f18] shadow-[0_30px_80px_rgba(0,0,0,0.8),_0_0_0_1px_rgba(255,255,255,0.05)] transition-all duration-300 hover:-translate-y-2">
+              <img src="./assets/home_page_dark.png" alt="App Home Screen" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#050d1a] to-transparent pointer-events-none z-20">
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       TRUST INDICATORS — WHAT MAKES CSQUIZ DIFFERENT
+  ═══════════════════════════════════════════════ -->
+  <section class="bg-white py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="reveal text-center mb-12">
+        <p class="text-gray-400 text-sm font-display font-semibold tracking-widest uppercase">
+          Not just another MCQ app
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <!-- Stat 1 -->
+        <div
+          class="reveal reveal-delay-1 stat-card bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-3xl p-8 text-center">
+          <div class="w-14 h-14 rounded-2xl bg-primary-500/10 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+              stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+          <div class="font-display font-800 text-4xl text-gray-900 mb-2">
+            15,000+
+          </div>
+          <div class="text-primary-600 font-semibold font-display text-lg mb-2">
+            Solved Explanations
+          </div>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Every MCQ comes with a detailed explanation — including code blocks
+            and images where relevant.
+          </p>
+        </div>
+
+        <!-- Stat 2 -->
+        <div
+          class="reveal reveal-delay-2 stat-card bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-3xl p-8 text-center">
+          <div class="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+          </div>
+          <div class="font-display font-800 text-4xl text-gray-900 mb-2">
+            Multi-Subject
+          </div>
+          <div class="text-blue-700 font-semibold font-display text-lg mb-2">
+            Custom Mock Tests
+          </div>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Combine multiple subjects into one timed test. Set question count,
+            timer (10–120 min), and specific categories.
+          </p>
+        </div>
+
+        <!-- Stat 3 -->
+        <div
+          class="reveal reveal-delay-3 stat-card bg-gradient-to-br from-purple-50 to-white border border-purple-100 rounded-3xl p-8 text-center">
+          <div class="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+              stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+            </svg>
+          </div>
+          <div class="font-display font-800 text-4xl text-gray-900 mb-2">
+            Deep
+          </div>
+          <div class="text-purple-700 font-semibold font-display text-lg mb-2">
+            Topic Drill-Down
+          </div>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Navigate Subject → Category → Topic → Questions. Practice exactly
+            what you need, not random questions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       FEATURES SECTION
+  ═══════════════════════════════════════════════ -->
+  <section id="features" class="bg-gray-50 py-20 sm:py-28">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <!-- Header -->
+      <div class="reveal text-center mb-16">
+        <div
+          class="inline-flex items-center gap-2 bg-primary-50 border border-primary-100 rounded-full px-4 py-1.5 mb-5">
+          <svg class="w-3.5 h-3.5 text-primary-500" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+          </svg>
+          <span class="text-primary-700 text-sm font-display font-semibold">Everything You Need</span>
+        </div>
+        <h2 class="font-display font-800 text-4xl sm:text-5xl text-gray-900 mb-4">
+          Packed with Powerful Features
+        </h2>
+        <p class="text-gray-500 text-lg max-w-2xl mx-auto">
+          Every feature is thoughtfully crafted to help you study smarter,
+          practice better, and perform with confidence.
+        </p>
+      </div>
+
+      <!-- Feature Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- Feature cards array -->
+        <!-- 1 -->
+        <div class="reveal reveal-delay-1 feature-card bg-white border border-gray-100 rounded-3xl p-7 shadow-sm">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 text-3xl"
+            style="background: linear-gradient(135deg, #dbeafe, #eff6ff)">
+            📥
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-lg mb-2">
+            Download Subjects Offline
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Select any subject, download it once, and practice without
+            internet — perfect for studying on the go.
+          </p>
+        </div>
+
+        <!-- 2 -->
+        <div class="reveal reveal-delay-2 feature-card bg-white border border-gray-100 rounded-3xl p-7 shadow-sm">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 text-3xl"
+            style="background: linear-gradient(135deg, #dcfce7, #f0fdf4)">
+            🧠
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-lg mb-2">
+            MCQ Practice Mode
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Practice at your own pace with instant explanations, hints, and
+            topic-filtered question banks.
+          </p>
+        </div>
+
+        <!-- 3 -->
+        <div class="reveal reveal-delay-3 feature-card bg-white border border-gray-100 rounded-3xl p-7 shadow-sm">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 text-3xl"
+            style="background: linear-gradient(135deg, #fee2e2, #fff1f2)">
+            ⏱️
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-lg mb-2">
+            Timed Test Mode
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Simulate real exam pressure with configurable timers, question
+            counts, and difficulty settings.
+          </p>
+        </div>
+
+        <!-- 4 -->
+        <div class="reveal reveal-delay-1 feature-card bg-white border border-gray-100 rounded-3xl p-7 shadow-sm">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 text-3xl"
+            style="background: linear-gradient(135deg, #fef9c3, #fefce8)">
+            🔖
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-lg mb-2">
+            Smart Bookmarks
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Save tricky questions for focused revision. Review your bookmarks
+            anytime, organized by topic.
+          </p>
+        </div>
+
+        <!-- 5 -->
+        <div class="reveal reveal-delay-2 feature-card bg-white border border-gray-100 rounded-3xl p-7 shadow-sm">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 text-3xl"
+            style="background: linear-gradient(135deg, #ffedd5, #fff7ed)">
+            🔥
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-lg mb-2">
+            Daily Study Streak
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Build a study habit with daily streak tracking. Unlock milestones
+            as your consistency grows.
+          </p>
+        </div>
+
+        <!-- 6 -->
+        <div class="reveal reveal-delay-3 feature-card bg-white border border-gray-100 rounded-3xl p-7 shadow-sm">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 text-3xl"
+            style="background: linear-gradient(135deg, #e0e7ff, #eef2ff)">
+            📊
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-lg mb-2">
+            Performance Dashboard
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Visualize your accuracy trends, weak topics, and overall progress
+            across all subjects.
+          </p>
+        </div>
+
+        <!-- 7 -->
+        <div class="reveal reveal-delay-1 feature-card bg-white border border-gray-100 rounded-3xl p-7 shadow-sm">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 text-3xl"
+            style="background: linear-gradient(135deg, #d1fae5, #ecfdf5)">
+            🔄
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-lg mb-2">
+            Auto Subject Updates
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Get notified when new questions are added. Keep your content fresh
+            with one-tap updates.
+          </p>
+        </div>
+
+        <!-- 8 -->
+        <div class="reveal reveal-delay-2 feature-card bg-white border border-gray-100 rounded-3xl p-7 shadow-sm">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 text-3xl"
+            style="background: linear-gradient(135deg, #f3e8ff, #faf5ff)">
+            🌗
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-lg mb-2">
+            Theme Ready
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Preview the app in both light and dark themes while keeping the
+            landing page clean and consistent.
+          </p>
+        </div>
+
+        <!-- 9 -->
+        <div class="reveal reveal-delay-3 feature-card bg-white border border-gray-100 rounded-3xl p-7 shadow-sm">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 text-3xl"
+            style="background: linear-gradient(135deg, #fce7f3, #fdf2f8)">
+            🔔
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-lg mb-2">
+            Study Reminders
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Set custom daily reminders to keep your practice consistent
+            without breaking your flow.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SUBJECT LIBRARY
+  ═══════════════════════════════════════════════ -->
+  <section id="subjects" class="bg-gray-50 py-20 sm:py-28">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="reveal text-center mb-16">
+        <div
+          class="inline-flex items-center gap-2 bg-primary-50 border border-primary-100 rounded-full px-4 py-1.5 mb-5">
+          <span class="text-primary-700 text-sm font-display font-semibold">16 Subjects</span>
+        </div>
+        <h2 class="font-display font-800 text-4xl sm:text-5xl text-gray-900 mb-4">
+          15,000+ Solved MCQs Across<br />
+          <span class="text-primary-500">Every Core CS Subject</span>
+        </h2>
+        <p class="text-gray-500 text-lg max-w-2xl mx-auto">
+          Download any subject and practice offline with detailed explanations for every question. New subjects and
+          updates are added regularly.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- C Programming -->
+        <div
+          class="reveal reveal-delay-1 bg-white rounded-2xl border border-gray-100 p-5 hover:border-primary-200 hover:shadow-lg hover:shadow-primary-500/5 transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+              💻</div>
+            <span class="text-xs font-display font-700 text-primary-500 bg-primary-50 px-2.5 py-1 rounded-full">1,591
+              MCQs</span>
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-base mb-1.5">C Programming</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">Pointers, Arrays, Strings, Functions, Structures</p>
+        </div>
+
+        <!-- OOP -->
+        <div
+          class="reveal reveal-delay-1 bg-white rounded-2xl border border-gray-100 p-5 hover:border-primary-200 hover:shadow-lg hover:shadow-primary-500/5 transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-purple-50 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+              🧬</div>
+            <span class="text-xs font-display font-700 text-primary-500 bg-primary-50 px-2.5 py-1 rounded-full">1,350
+              MCQs</span>
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-base mb-1.5">Object Oriented Programming</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">Inheritance, Polymorphism, Abstraction, Encapsulation</p>
+        </div>
+
+        <!-- Java -->
+        <div
+          class="reveal reveal-delay-1 bg-white rounded-2xl border border-gray-100 p-5 hover:border-primary-200 hover:shadow-lg hover:shadow-primary-500/5 transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+              ☕</div>
+            <span class="text-xs font-display font-700 text-primary-500 bg-primary-50 px-2.5 py-1 rounded-full">1,335
+              MCQs</span>
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-base mb-1.5">Java Programming</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">Collections, Multithreading, Exception Handling, JDBC</p>
+        </div>
+
+        <!-- Computer Network -->
+        <div
+          class="reveal reveal-delay-2 bg-white rounded-2xl border border-gray-100 p-5 hover:border-primary-200 hover:shadow-lg hover:shadow-primary-500/5 transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-cyan-50 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+              🌐</div>
+            <span class="text-xs font-display font-700 text-primary-500 bg-primary-50 px-2.5 py-1 rounded-full">1,219
+              MCQs</span>
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-base mb-1.5">Computer Network</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">OSI Model, TCP/IP, Routing, DNS, Subnetting</p>
+        </div>
+
+        <!-- Python -->
+        <div
+          class="reveal reveal-delay-2 bg-white rounded-2xl border border-gray-100 p-5 hover:border-primary-200 hover:shadow-lg hover:shadow-primary-500/5 transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-yellow-50 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+              🐍</div>
+            <span class="text-xs font-display font-700 text-primary-500 bg-primary-50 px-2.5 py-1 rounded-full">1,188
+              MCQs</span>
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-base mb-1.5">Python Programming</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">Data Types, List Comprehension, OOP, File Handling</p>
+        </div>
+
+        <!-- Operating System -->
+        <div
+          class="reveal reveal-delay-2 bg-white rounded-2xl border border-gray-100 p-5 hover:border-primary-200 hover:shadow-lg hover:shadow-primary-500/5 transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+              ⚙️</div>
+            <span class="text-xs font-display font-700 text-primary-500 bg-primary-50 px-2.5 py-1 rounded-full">1,121
+              MCQs</span>
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-base mb-1.5">Operating System</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">Process Management, Memory Management, Deadlocks, Scheduling
+          </p>
+        </div>
+
+        <!-- Computer Fundamental -->
+        <div
+          class="reveal reveal-delay-3 bg-white rounded-2xl border border-gray-100 p-5 hover:border-primary-200 hover:shadow-lg hover:shadow-primary-500/5 transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+              🖥️</div>
+            <span class="text-xs font-display font-700 text-primary-500 bg-primary-50 px-2.5 py-1 rounded-full">1,000
+              MCQs</span>
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-base mb-1.5">Computer Fundamental</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">Number Systems, Logic Gates, Computer Architecture Basics</p>
+        </div>
+
+        <!-- Cyber Security -->
+        <div
+          class="reveal reveal-delay-3 bg-white rounded-2xl border border-gray-100 p-5 hover:border-primary-200 hover:shadow-lg hover:shadow-primary-500/5 transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+              🔐</div>
+            <span class="text-xs font-display font-700 text-primary-500 bg-primary-50 px-2.5 py-1 rounded-full">1,000
+              MCQs</span>
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-base mb-1.5">Cyber Security</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">Cryptography, Network Security, Firewalls, Ethical Hacking
+          </p>
+        </div>
+
+        <!-- Cloud Computing -->
+        <div
+          class="reveal reveal-delay-3 bg-white rounded-2xl border border-gray-100 p-5 hover:border-primary-200 hover:shadow-lg hover:shadow-primary-500/5 transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-sky-50 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+              ☁️</div>
+            <span class="text-xs font-display font-700 text-primary-500 bg-primary-50 px-2.5 py-1 rounded-full">990
+              MCQs</span>
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-base mb-1.5">Cloud Computing</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">IaaS, PaaS, SaaS, Virtualization, AWS Basics</p>
+        </div>
+
+        <!-- DBMS -->
+        <div
+          class="reveal reveal-delay-3 bg-white rounded-2xl border border-gray-100 p-5 hover:border-primary-200 hover:shadow-lg hover:shadow-primary-500/5 transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+              🗄️</div>
+            <span class="text-xs font-display font-700 text-primary-500 bg-primary-50 px-2.5 py-1 rounded-full">871
+              MCQs</span>
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-base mb-1.5">DBMS</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">Normalization, SQL Joins, ER Diagrams, Transactions, ACID</p>
+        </div>
+
+        <!-- Linux -->
+        <div
+          class="reveal reveal-delay-4 bg-white rounded-2xl border border-gray-100 p-5 hover:border-primary-200 hover:shadow-lg hover:shadow-primary-500/5 transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+              🐧</div>
+            <span class="text-xs font-display font-700 text-primary-500 bg-primary-50 px-2.5 py-1 rounded-full">847
+              MCQs</span>
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-base mb-1.5">Linux</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">Shell Commands, File System, Permissions, Process Management
+          </p>
+        </div>
+
+        <!-- Automata Theory -->
+        <div
+          class="reveal reveal-delay-4 bg-white rounded-2xl border border-gray-100 p-5 hover:border-primary-200 hover:shadow-lg hover:shadow-primary-500/5 transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-violet-50 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+              🔄</div>
+            <span class="text-xs font-display font-700 text-primary-500 bg-primary-50 px-2.5 py-1 rounded-full">832
+              MCQs</span>
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-base mb-1.5">Automata Theory / TOC</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">DFA, NFA, Regular Expressions, Context-Free Grammars, Turing
+            Machine</p>
+        </div>
+
+        <!-- AI -->
+        <div
+          class="reveal reveal-delay-4 bg-white rounded-2xl border border-gray-100 p-5 hover:border-primary-200 hover:shadow-lg hover:shadow-primary-500/5 transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-pink-50 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+              🤖</div>
+            <span class="text-xs font-display font-700 text-primary-500 bg-primary-50 px-2.5 py-1 rounded-full">765
+              MCQs</span>
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-base mb-1.5">Artificial Intelligence</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">Search Algorithms, Knowledge Representation, Neural Networks
+          </p>
+        </div>
+
+        <!-- Computer Architecture -->
+        <div
+          class="reveal reveal-delay-4 bg-white rounded-2xl border border-gray-100 p-5 hover:border-primary-200 hover:shadow-lg hover:shadow-primary-500/5 transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+              🏗️</div>
+            <span class="text-xs font-display font-700 text-primary-500 bg-primary-50 px-2.5 py-1 rounded-full">749
+              MCQs</span>
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-base mb-1.5">Computer Architecture</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">Pipelining, Cache Memory, Instruction Sets, ALU Design</p>
+        </div>
+
+        <!-- SQL -->
+        <div
+          class="reveal reveal-delay-4 bg-white rounded-2xl border border-gray-100 p-5 hover:border-primary-200 hover:shadow-lg hover:shadow-primary-500/5 transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-lime-50 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+              📊</div>
+            <span class="text-xs font-display font-700 text-primary-500 bg-primary-50 px-2.5 py-1 rounded-full">639
+              MCQs</span>
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-base mb-1.5">SQL</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">SELECT, JOINs, Subqueries, Aggregate Functions, Indexes</p>
+        </div>
+
+        <!-- Machine Learning -->
+        <div
+          class="reveal reveal-delay-4 bg-white rounded-2xl border border-gray-100 p-5 hover:border-primary-200 hover:shadow-lg hover:shadow-primary-500/5 transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-fuchsia-50 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+              🧠</div>
+            <span class="text-xs font-display font-700 text-primary-500 bg-primary-50 px-2.5 py-1 rounded-full">620
+              MCQs</span>
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-base mb-1.5">Machine Learning</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">Regression, Classification, Clustering, Decision Trees, SVM
+          </p>
+        </div>
+      </div>
+
+      <!-- CTA below grid -->
+      <div class="reveal text-center mt-12">
+        <a href="https://play.google.com/store/apps/details?id=com.nirvionlabs.csquiz"
+          class="inline-flex items-center gap-2 bg-primary-500 hover:bg-primary-600 text-white font-display font-700 text-sm px-6 py-3 rounded-xl shadow-lg shadow-primary-500/25 transition-all duration-300 hover:-translate-y-0.5">
+          Download & Start Practicing
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+        <p class="text-gray-400 text-xs mt-3">More subjects added regularly • Auto-updates when new content is available
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       WHO IS THIS FOR
+  ═══════════════════════════════════════════════ -->
+  <section class="bg-white py-20 sm:py-28" aria-label="Target audience">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="reveal text-center mb-16">
+        <div
+          class="inline-flex items-center gap-2 bg-primary-50 border border-primary-100 rounded-full px-4 py-1.5 mb-5">
+          <span class="text-primary-700 text-sm font-display font-semibold">Built For You</span>
+        </div>
+        <h2 class="font-display font-800 text-4xl sm:text-5xl text-gray-900 mb-4">
+          Who Uses CSQuiz?
+        </h2>
+        <p class="text-gray-500 text-lg max-w-2xl mx-auto">
+          Whether you're preparing for university exams, competitive tests, or technical interviews — CSQuiz has you
+          covered.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- University -->
+        <div
+          class="reveal reveal-delay-1 bg-gradient-to-br from-blue-50 to-white rounded-2xl border border-blue-100 p-6 text-center hover:shadow-lg transition-shadow duration-300">
+          <div class="w-14 h-14 rounded-2xl bg-primary-500/10 flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">🎓</span>
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-lg mb-2">University Exams</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            BCA, B.Tech, MCA, B.Sc (CS/IT) students preparing for semester exams and internal assessments.
+          </p>
+        </div>
+
+        <!-- Competitive -->
+        <div
+          class="reveal reveal-delay-2 bg-gradient-to-br from-purple-50 to-white rounded-2xl border border-purple-100 p-6 text-center hover:shadow-lg transition-shadow duration-300">
+          <div class="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">📝</span>
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-lg mb-2">Competitive Exams</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            GATE, UGC NET, NIELIT, and state PSC aspirants who need structured CS MCQ practice.
+          </p>
+        </div>
+
+        <!-- Placements -->
+        <div
+          class="reveal reveal-delay-3 bg-gradient-to-br from-green-50 to-white rounded-2xl border border-green-100 p-6 text-center hover:shadow-lg transition-shadow duration-300">
+          <div class="w-14 h-14 rounded-2xl bg-green-500/10 flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">💼</span>
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-lg mb-2">Placement Prep</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Students preparing for campus placements and technical interview rounds at IT companies.
+          </p>
+        </div>
+
+        <!-- Self-Learning -->
+        <div
+          class="reveal reveal-delay-4 bg-gradient-to-br from-orange-50 to-white rounded-2xl border border-orange-100 p-6 text-center hover:shadow-lg transition-shadow duration-300">
+          <div class="w-14 h-14 rounded-2xl bg-orange-500/10 flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">🧪</span>
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-lg mb-2">Self-Learning</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Anyone who wants to brush up on computer science fundamentals at their own pace — no pressure.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SCREENSHOTS SECTION — REDESIGNED
+  ═══════════════════════════════════════════════ -->
+  <section id="screenshots-preview" class="screens-section relative py-24 sm:py-32 overflow-hidden"
+    data-shot-theme="light">
+    <!-- Grid overlay -->
+    <div class="absolute inset-0 pointer-events-none" style="
+          background-image:
+            linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+            linear-gradient(
+              90deg,
+              rgba(59, 130, 246, 0.03) 1px,
+              transparent 1px
+            );
+          background-size: 50px 50px;
+        "></div>
+    <!-- Side glows -->
+    <div class="absolute top-1/2 -left-32 w-64 h-64 bg-primary-500/6 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 -right-32 w-64 h-64 bg-blue-600/6 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
+      <!-- Header -->
+      <div class="reveal text-center mb-12">
+        <div class="inline-flex items-center gap-2 badge rounded-full px-4 py-1.5 mb-5">
+          <span class="text-primary-400 text-sm font-display font-semibold">App in Action</span>
+        </div>
+        <h2 class="font-display font-800 text-4xl sm:text-5xl text-white mb-4">
+          Every Screen, Crafted
+        </h2>
+        <p class="text-gray-400 text-lg max-w-xl mx-auto">
+          Tap through each screen to explore how CSQuiz looks and feels —
+          clean, focused, distraction-free.
+        </p>
+      </div>
+
+      <div class="reveal flex justify-center mb-10" id="preview-theme">
+        <div class="preview-toggle badge rounded-2xl">
+          <div class="preview-toggle-copy">
+            <div class="preview-toggle-title">Preview App Theme</div>
+            <div class="preview-toggle-subtitle">
+              Switch the phone mockup between light and dark.
+            </div>
+          </div>
+          <span class="toggle-label" id="preview-theme-label">Light</span>
+          <button class="theme-toggle-btn is-light" id="preview-theme-toggle" type="button" role="switch"
+            aria-label="Toggle screenshot preview theme" aria-checked="false">
+            <div class="toggle-thumb"></div>
+            <svg class="toggle-moon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+            </svg>
+            <svg class="toggle-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab selector -->
+      <div class="reveal flex flex-wrap justify-center gap-2 sm:gap-3 mb-14">
+        <button class="screen-tab active" data-screen="0">🏠 Home</button>
+        <button class="screen-tab" data-screen="1">📚 Subjects</button>
+        <button class="screen-tab" data-screen="2">🧠 Practice</button>
+        <button class="screen-tab" data-screen="3">⏱️ Test</button>
+        <button class="screen-tab" data-screen="4">⚙️ Settings</button>
+      </div>
+
+      <!-- Main content: phone + description -->
+      <div class="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20">
+        <!-- Left: Feature description (desktop) -->
+        <div class="hidden lg:block w-72 xl:w-80 text-right">
+          <!-- Screen 0: Home -->
+          <div class="screen-desc" data-desc="0">
+            <div class="font-display font-700 text-white text-2xl mb-3">
+              Daily Momentum
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+              Track your progress, stay consistent, and jump back into
+              studying instantly.
+            </p>
+            <div class="space-y-3">
+              <div class="feat-item flex items-center gap-3 justify-end">
+                <span class="text-gray-400 text-sm">Daily Streak Counter</span>
+                <div class="w-8 h-8 rounded-xl bg-orange-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  🔥
+                </div>
+              </div>
+
+              <div class="feat-item flex items-center gap-3 justify-end" style="transition-delay: 0.2s">
+                <span class="text-gray-400 text-sm">Recent activity feed</span>
+                <div class="w-8 h-8 rounded-xl bg-green-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  ✅
+                </div>
+              </div>
+              <div class="feat-item flex items-center gap-3 justify-end" style="transition-delay: 0.1s">
+                <span class="text-gray-400 text-sm">Top Performers</span>
+                <div
+                  class="w-8 h-8 rounded-xl bg-primary-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  📖
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Screen 1: Subjects -->
+          <div class="screen-desc hidden" data-desc="1">
+            <div class="font-display font-700 text-white text-2xl mb-3">
+              Pick & Start
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+              Choose any subject and start practicing in seconds. Download it
+              for offline access and keep learning, no matter where you are.
+            </p>
+            <div class="space-y-3">
+              <div class="feat-item flex items-center gap-3 justify-end">
+                <span class="text-gray-400 text-sm">1000+ MCQs per subject</span>
+                <div
+                  class="w-8 h-8 rounded-xl bg-primary-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  📦
+                </div>
+              </div>
+              <div class="feat-item flex items-center gap-3 justify-end" style="transition-delay: 0.1s">
+                <span class="text-gray-400 text-sm">Easy Browse</span>
+                <div class="w-8 h-8 rounded-xl bg-blue-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  🔍
+                </div>
+              </div>
+              <div class="feat-item flex items-center gap-3 justify-end" style="transition-delay: 0.2s">
+                <span class="text-gray-400 text-sm">One Tap Download </span>
+                <div class="w-8 h-8 rounded-xl bg-green-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  ⬇️
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Screen 2: Practice -->
+          <div class="screen-desc hidden" data-desc="2">
+            <div class="font-display font-700 text-white text-2xl mb-3">
+              Learn Fast
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+              Answer MCQs at your pace. Tap an option and get an instant
+              explanation.
+            </p>
+            <div class="space-y-3">
+              <div class="feat-item flex items-center gap-3 justify-end">
+                <span class="text-gray-400 text-sm">Instant answer reveal</span>
+                <div class="w-8 h-8 rounded-xl bg-green-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  💡
+                </div>
+              </div>
+              <div class="feat-item flex items-center gap-3 justify-end" style="transition-delay: 0.1s">
+                <span class="text-gray-400 text-sm">Topic filter chip bar</span>
+                <div
+                  class="w-8 h-8 rounded-xl bg-primary-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  🏷️
+                </div>
+              </div>
+              <div class="feat-item flex items-center gap-3 justify-end" style="transition-delay: 0.2s">
+                <span class="text-gray-400 text-sm">Bookmark this question</span>
+                <div class="w-8 h-8 rounded-xl bg-yellow-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  🔖
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Screen 3: Test -->
+          <div class="screen-desc hidden" data-desc="3">
+            <div class="font-display font-700 text-white text-2xl mb-3">
+              Test Yourself
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+              Simulate real exams with time pressure and no hints. all the
+              focus, all the adrenaline — just you and the questions.
+            </p>
+            <div class="space-y-3">
+              <div class="feat-item flex items-center gap-3 justify-end">
+                <span class="text-gray-400 text-sm">Countdown timer</span>
+                <div class="w-8 h-8 rounded-xl bg-red-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  ⏳
+                </div>
+              </div>
+              <div class="feat-item flex items-center gap-3 justify-end" style="transition-delay: 0.1s">
+                <span class="text-gray-400 text-sm">Question progress tracker</span>
+                <div
+                  class="w-8 h-8 rounded-xl bg-primary-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  📋
+                </div>
+              </div>
+              <div class="feat-item flex items-center gap-3 justify-end" style="transition-delay: 0.2s">
+                <span class="text-gray-400 text-sm">Full result breakdown</span>
+                <div class="w-8 h-8 rounded-xl bg-blue-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  🏆
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Screen 4: Dashboard -->
+          <div class="screen-desc hidden" data-desc="4">
+            <div class="font-display font-700 text-white text-2xl mb-3">
+              Stay in Control
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+              Customize your app experience and manage your data. Set study
+              reminders, clear your history and check storage - all in one
+              place.
+            </p>
+            <div class="space-y-3">
+              <div class="feat-item flex items-center gap-3 justify-end">
+                <span class="text-gray-400 text-sm">Reminders</span>
+                <div
+                  class="w-8 h-8 rounded-xl bg-primary-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  🔔
+                </div>
+              </div>
+              <div class="feat-item flex items-center gap-3 justify-end" style="transition-delay: 0.1s">
+                <span class="text-gray-400 text-sm">Storage</span>
+                <div class="w-8 h-8 rounded-xl bg-blue-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  💾
+                </div>
+              </div>
+              <div class="feat-item flex items-center gap-3 justify-end" style="transition-delay: 0.2s">
+                <span class="text-gray-400 text-sm">Reset Data</span>
+                <div class="w-8 h-8 rounded-xl bg-green-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  🗑️
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Center: Phone mockup -->
+        <div class="phone-wrap relative">
+          <!-- Glow halo -->
+          <div class="absolute inset-0 rounded-[50px] blur-2xl opacity-40 pointer-events-none" style="
+                background: radial-gradient(
+                  ellipse at center,
+                  rgba(59, 130, 246, 0.35),
+                  transparent 70%
+                );
+                transform: scale(1.1);
+              "></div>
+
+          <div class="phone-frame relative z-10">
+            <!-- Dynamic island notch -->
+
+            <div class="phone-screen-stage">
+              <!-- Light theme screens (shown when theme=light) -->
+              <div class="screenshot-screen" data-theme="light" data-screen="0">
+                <img src="./assets/home_page_light.png" alt="Home Screen" class="w-full h-full object-cover" />
+              </div>
+              <div class="screenshot-screen" data-theme="light" data-screen="1">
+                <img src="./assets/add_subject_light.png" alt="Add Subject Screen" class="w-full h-full object-cover" />
+              </div>
+              <div class="screenshot-screen" data-theme="light" data-screen="2">
+                <img src="./assets/practice_page_with_explanation.png" alt="Practice Screen"
+                  class="w-full h-full object-cover" />
+              </div>
+              <div class="screenshot-screen" data-theme="light" data-screen="3">
+                <img src="./assets/test_taking_page.png" alt="Test Screen" class="w-full h-full object-cover" />
+              </div>
+              <div class="screenshot-screen" data-theme="light" data-screen="4">
+                <img src="./assets/setting_page.png" alt="Settings Screen" class="w-full h-full object-cover" />
+              </div>
+
+              <!-- Dark theme screens (shown when theme=dark) -->
+              <div class="screenshot-screen" data-theme="dark" data-screen="0">
+                <img src="./assets/home_page_dark.png" alt="Home Screen Dark" class="w-full h-full object-cover" />
+              </div>
+              <div class="screenshot-screen" data-theme="dark" data-screen="1">
+                <img src="./assets/add_subject_dark.png" alt="Add Subject Screen Dark"
+                  class="w-full h-full object-cover" />
+              </div>
+              <div class="screenshot-screen" data-theme="dark" data-screen="2">
+                <img src="./assets/practice_page_with_explanation_dark.png" alt="Practice Screen Dark"
+                  class="w-full h-full object-cover" />
+              </div>
+              <div class="screenshot-screen" data-theme="dark" data-screen="3">
+                <img src="./assets/test_taking_page_dark.png" alt="Test Screen Dark"
+                  class="w-full h-full object-cover" />
+              </div>
+              <div class="screenshot-screen" data-theme="dark" data-screen="4">
+                <img src="./assets/setting_page_dark.png" alt="Settings Screen Dark"
+                  class="w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+          <!-- /phone-frame -->
+
+          <!-- Navigation dots -->
+          <div class="flex items-center justify-center gap-2 mt-5">
+            <div class="screen-dot active" data-dot="0"></div>
+            <div class="screen-dot" data-dot="1"></div>
+            <div class="screen-dot" data-dot="2"></div>
+            <div class="screen-dot" data-dot="3"></div>
+            <div class="screen-dot" data-dot="4"></div>
+          </div>
+        </div>
+        <!-- /phone-wrap -->
+
+        <!-- Right: Feature description (desktop) -->
+        <div class="hidden lg:block w-72 xl:w-80">
+          <!-- Screen 0 -->
+          <div class="screen-desc-r" data-desc-r="0">
+            <div class="font-display font-700 text-white text-2xl mb-3">
+              All-in-One
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+              Everything you need to study — right where you left off.
+            </p>
+            <div class="space-y-3">
+              <div class="feat-item flex items-center gap-3" style="transition-delay: 0.05s">
+                <div
+                  class="w-8 h-8 rounded-xl bg-primary-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  🚀
+                </div>
+                <span class="text-gray-400 text-sm">No Login Required</span>
+              </div>
+              <div class="feat-item flex items-center gap-3" style="transition-delay: 0.15s">
+                <div class="w-8 h-8 rounded-xl bg-green-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  ✨
+                </div>
+                <span class="text-gray-400 text-sm">Clean User Interface</span>
+              </div>
+              <div class="feat-item flex items-center gap-3" style="transition-delay: 0.25s">
+                <div class="w-8 h-8 rounded-xl bg-blue-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  ⚡
+                </div>
+                <span class="text-gray-400 text-sm">Instant load, zero lag</span>
+              </div>
+            </div>
+          </div>
+          <!-- Screen 1 -->
+          <div class="screen-desc-r hidden" data-desc-r="1">
+            <div class="font-display font-700 text-white text-2xl mb-3">
+              Offline Ready
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+              Downloaded subjects live on your device. Study in a metro, on a
+              flight, or anywhere with zero connectivity.
+            </p>
+            <div class="space-y-3">
+              <div class="feat-item flex items-center gap-3" style="transition-delay: 0.05s">
+                <div
+                  class="w-8 h-8 rounded-xl bg-primary-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  💾
+                </div>
+                <span class="text-gray-400 text-sm">Stored locally on device</span>
+              </div>
+              <div class="feat-item flex items-center gap-3" style="transition-delay: 0.15s">
+                <div class="w-8 h-8 rounded-xl bg-green-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  🔄
+                </div>
+                <span class="text-gray-400 text-sm">Auto-updates when online</span>
+              </div>
+              <div class="feat-item flex items-center gap-3" style="transition-delay: 0.25s">
+                <div class="w-8 h-8 rounded-xl bg-orange-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  📊
+                </div>
+                <span class="text-gray-400 text-sm">Track progress per subject</span>
+              </div>
+            </div>
+          </div>
+          <!-- Screen 2 -->
+          <div class="screen-desc-r hidden" data-desc-r="2">
+            <div class="font-display font-700 text-white text-2xl mb-3">
+              Smart Learning
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+              Understand mistakes and improve with every question. just tap an
+              answer to see if you're right.
+            </p>
+            <div class="space-y-3">
+              <div class="feat-item flex items-center gap-3" style="transition-delay: 0.05s">
+                <div class="w-8 h-8 rounded-xl bg-green-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  ✅
+                </div>
+                <span class="text-gray-400 text-sm">Color-coded answer states</span>
+              </div>
+              <div class="feat-item flex items-center gap-3" style="transition-delay: 0.15s">
+                <div class="w-8 h-8 rounded-xl bg-yellow-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  🔍
+                </div>
+                <span class="text-gray-400 text-sm">Explanation for every MCQ</span>
+              </div>
+              <div class="feat-item flex items-center gap-3" style="transition-delay: 0.25s">
+                <div class="w-8 h-8 rounded-xl bg-blue-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  🎚️
+                </div>
+                <span class="text-gray-400 text-sm">Filter by topic instantly</span>
+              </div>
+            </div>
+          </div>
+          <!-- Screen 3 -->
+          <div class="screen-desc-r hidden" data-desc-r="3">
+            <div class="font-display font-700 text-white text-2xl mb-3">
+              Exam Feel
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+              Real exam energy. The countdown clock, locked answers, and final
+              score sheet build the muscle memory you need.
+            </p>
+            <div class="space-y-3">
+              <div class="feat-item flex items-center gap-3" style="transition-delay: 0.05s">
+                <div class="w-8 h-8 rounded-xl bg-red-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  ⏰
+                </div>
+                <span class="text-gray-400 text-sm">Configurable time limit</span>
+              </div>
+              <div class="feat-item flex items-center gap-3" style="transition-delay: 0.15s">
+                <div
+                  class="w-8 h-8 rounded-xl bg-primary-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  🔒
+                </div>
+                <span class="text-gray-400 text-sm">Answers locked until end</span>
+              </div>
+              <div class="feat-item flex items-center gap-3" style="transition-delay: 0.25s">
+                <div class="w-8 h-8 rounded-xl bg-green-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  📋
+                </div>
+                <span class="text-gray-400 text-sm">Review Mode</span>
+              </div>
+            </div>
+          </div>
+          <!-- Screen 4 -->
+          <div class="screen-desc-r hidden" data-desc-r="4">
+            <div class="font-display font-700 text-white text-2xl mb-3">
+              Your Setup
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+              Make CSQuiz work exactly how you want. switch themes, share app
+              , reset test data and more — all from the settings screen.
+            </p>
+            <div class="space-y-3">
+              <div class="feat-item flex items-center gap-3" style="transition-delay: 0.05s">
+                <div
+                  class="w-8 h-8 rounded-xl bg-primary-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  🌙
+                </div>
+                <span class="text-gray-400 text-sm">Light/Dark</span>
+              </div>
+              <div class="feat-item flex items-center gap-3" style="transition-delay: 0.15s">
+                <div class="w-8 h-8 rounded-xl bg-blue-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  📤
+                </div>
+                <span class="text-gray-400 text-sm">Share App</span>
+              </div>
+              <div class="feat-item flex items-center gap-3" style="transition-delay: 0.25s">
+                <div class="w-8 h-8 rounded-xl bg-yellow-500/15 flex items-center justify-center flex-shrink-0 text-lg">
+                  ⚙️
+                </div>
+                <span class="text-gray-400 text-sm">Preferences</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /flex layout -->
+
+      <!-- Mobile description (shown below phone on mobile) -->
+      <div class="lg:hidden mt-8 max-w-sm mx-auto" id="mobile-desc-area">
+        <div class="text-center">
+          <div class="font-display font-700 text-white text-xl mb-2" id="mobile-desc-title">
+            Welcome Home
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed" id="mobile-desc-body">
+            Your personal study hub. See your streak, pick a subject, and jump
+            straight into practice — zero friction.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       HOW IT WORKS
+  ═══════════════════════════════════════════════ -->
+  <section id="how-it-works" class="bg-white py-20 sm:py-28">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="reveal text-center mb-16">
+        <div
+          class="inline-flex items-center gap-2 bg-primary-50 border border-primary-100 rounded-full px-4 py-1.5 mb-5">
+          <span class="text-primary-700 text-sm font-display font-semibold">Simple Process</span>
+        </div>
+        <h2 class="font-display font-800 text-4xl sm:text-5xl text-gray-900 mb-4">
+          Up and Running in Minutes
+        </h2>
+        <p class="text-gray-500 text-lg max-w-xl mx-auto">
+          No setup complexity. Just download, choose a subject, and start
+          learning.
+        </p>
+      </div>
+
+      <!-- Steps -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="reveal reveal-delay-1 relative text-center">
+          <div class="step-connector">
+            <div
+              class="w-16 h-16 rounded-2xl bg-primary-500 flex items-center justify-center mx-auto mb-5 shadow-lg shadow-primary-500/30">
+              <svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+          </div>
+          <div class="font-display font-800 text-primary-500 text-sm tracking-widest uppercase mb-2">
+            Step 01
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-xl mb-2">
+            Install App
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Download CSQuiz for free from the Google Play Store in seconds.
+          </p>
+        </div>
+
+        <div class="reveal reveal-delay-2 relative text-center">
+          <div class="step-connector">
+            <div
+              class="w-16 h-16 rounded-2xl bg-primary-600 flex items-center justify-center mx-auto mb-5 shadow-lg shadow-primary-600/30">
+              <svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+              </svg>
+            </div>
+          </div>
+          <div class="font-display font-800 text-primary-600 text-sm tracking-widest uppercase mb-2">
+            Step 02
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-xl mb-2">
+            Download Subject
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Pick from a growing library of CS subjects and download them for
+            offline use.
+          </p>
+        </div>
+
+        <div class="reveal reveal-delay-3 relative text-center">
+          <div class="step-connector">
+            <div
+              class="w-16 h-16 rounded-2xl bg-primary-700 flex items-center justify-center mx-auto mb-5 shadow-lg shadow-primary-700/30">
+              <svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+          </div>
+          <div class="font-display font-800 text-primary-700 text-sm tracking-widest uppercase mb-2">
+            Step 03
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-xl mb-2">
+            Start Practicing
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Jump into Practice Mode with topic filters and get instant answer
+            explanations.
+          </p>
+        </div>
+
+        <div class="reveal reveal-delay-4 relative text-center">
+          <div
+            class="w-16 h-16 rounded-2xl bg-primary-800 flex items-center justify-center mx-auto mb-5 shadow-lg shadow-primary-800/30">
+            <svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <div class="font-display font-800 text-primary-800 text-sm tracking-widest uppercase mb-2">
+            Step 04
+          </div>
+          <h3 class="font-display font-700 text-gray-900 text-xl mb-2">
+            Take a Test
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Switch to Timed Test Mode to simulate exams and benchmark your
+            real performance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       PRACTICE VS TEST MODE COMPARISON
+  ═══════════════════════════════════════════════ -->
+  <section id="compare" class="bg-gray-50 py-20 sm:py-28">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="reveal text-center mb-16">
+        <div
+          class="inline-flex items-center gap-2 bg-primary-50 border border-primary-100 rounded-full px-4 py-1.5 mb-5">
+          <span class="text-primary-700 text-sm font-display font-semibold">Two Ways to Learn</span>
+        </div>
+        <h2 class="font-display font-800 text-4xl sm:text-5xl text-gray-900 mb-4">
+          Practice Mode vs Test Mode
+        </h2>
+        <p class="text-gray-500 text-lg max-w-2xl mx-auto">
+          Each mode is purpose-built — one for exploration and deep learning,
+          the other for exam simulation and performance benchmarking.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <!-- Practice Mode -->
+        <div class="reveal reveal-delay-1 compare-col bg-white rounded-3xl border border-gray-100 p-8 shadow-sm">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center">
+              <svg class="w-6 h-6 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
+            <div>
+              <div class="font-display font-700 text-gray-900 text-xl">
+                Practice Mode
+              </div>
+              <div class="text-primary-500 text-sm font-medium">
+                Learn at your pace
+              </div>
+            </div>
+          </div>
+          <ul class="space-y-3.5">
+            <li class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="text-gray-600 text-sm leading-relaxed">Unlimited time per question — no pressure</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="text-gray-600 text-sm leading-relaxed">Instant answer reveal with explanation</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="text-gray-600 text-sm leading-relaxed">Filter questions by topic or difficulty</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="text-gray-600 text-sm leading-relaxed">Bookmark questions for later review</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="text-gray-600 text-sm leading-relaxed">Skip and return to questions freely</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="text-gray-600 text-sm leading-relaxed">Builds conceptual understanding</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Test Mode -->
+        <div class="reveal reveal-delay-2 compare-col bg-navy-900 rounded-3xl border border-white/10 p-8 shadow-xl">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 rounded-2xl bg-primary-500/15 flex items-center justify-center">
+              <svg class="w-6 h-6 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <div class="font-display font-700 text-white text-xl">
+                Test Mode
+              </div>
+              <div class="text-primary-400 text-sm font-medium">
+                Exam simulation
+              </div>
+            </div>
+          </div>
+          <ul class="space-y-3.5">
+            <li class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-primary-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="text-gray-300 text-sm leading-relaxed">Configurable countdown timer per session</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-primary-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="text-gray-300 text-sm leading-relaxed">Answers hidden until test completion</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-primary-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="text-gray-300 text-sm leading-relaxed">Custom question count (10, 25, 50…)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-primary-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="text-gray-300 text-sm leading-relaxed">Detailed score report after submission</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-primary-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="text-gray-300 text-sm leading-relaxed">Track test history and score trends</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-primary-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="text-gray-300 text-sm leading-relaxed">Builds exam speed and confidence</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       PROGRESS & MOTIVATION SECTION
+  ═══════════════════════════════════════════════ -->
+  <section id="progress" class="bg-white py-20 sm:py-28">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Left: Visual dashboard mockup -->
+        <div class="reveal order-2 lg:order-1">
+          <div class="bg-gradient-to-br from-gray-50 to-blue-50/50 rounded-3xl border border-blue-100 p-7 shadow-lg">
+            <!-- Dashboard header -->
+            <div class="flex items-center justify-between mb-6">
+              <div>
+                <div class="font-display font-700 text-gray-900 text-lg">
+                  Your Progress
+                </div>
+                <div class="text-gray-400 text-sm">This week</div>
+              </div>
+              <div class="flex items-center gap-2 bg-orange-50 border border-orange-100 rounded-full px-3 py-1.5">
+                <span class="text-lg">🔥</span>
+                <span class="font-display font-700 text-orange-600">7-day streak</span>
+              </div>
+            </div>
+
+            <!-- Stats row -->
+            <div class="grid grid-cols-3 gap-3 mb-6">
+              <div class="bg-white rounded-2xl p-4 text-center shadow-sm border border-gray-100">
+                <div class="font-display font-800 text-2xl text-primary-500 mb-1">
+                  82%
+                </div>
+                <div class="text-gray-400 text-xs">Avg Score</div>
+              </div>
+              <div class="bg-white rounded-2xl p-4 text-center shadow-sm border border-gray-100">
+                <div class="font-display font-800 text-2xl text-gray-900 mb-1">
+                  240
+                </div>
+                <div class="text-gray-400 text-xs">Answered</div>
+              </div>
+              <div class="bg-white rounded-2xl p-4 text-center shadow-sm border border-gray-100">
+                <div class="font-display font-800 text-2xl text-green-600 mb-1">
+                  12
+                </div>
+                <div class="text-gray-400 text-xs">Tests Done</div>
+              </div>
+            </div>
+
+            <!-- Bar chart -->
+            <div class="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm mb-4">
+              <div class="text-gray-500 text-xs font-display font-semibold mb-4 uppercase tracking-wide">
+                Weekly Performance
+              </div>
+              <div class="flex items-end gap-2 h-24">
+                <div class="flex-1 flex flex-col items-center gap-1">
+                  <div class="w-full rounded-t-lg bg-primary-200" style="height: 45%"></div>
+                  <div class="text-gray-400 text-xs">Mon</div>
+                </div>
+                <div class="flex-1 flex flex-col items-center gap-1">
+                  <div class="w-full rounded-t-lg bg-primary-300" style="height: 60%"></div>
+                  <div class="text-gray-400 text-xs">Tue</div>
+                </div>
+                <div class="flex-1 flex flex-col items-center gap-1">
+                  <div class="w-full rounded-t-lg bg-primary-400" style="height: 75%"></div>
+                  <div class="text-gray-400 text-xs">Wed</div>
+                </div>
+                <div class="flex-1 flex flex-col items-center gap-1">
+                  <div class="w-full rounded-t-lg bg-primary-300" style="height: 55%"></div>
+                  <div class="text-gray-400 text-xs">Thu</div>
+                </div>
+                <div class="flex-1 flex flex-col items-center gap-1">
+                  <div class="w-full rounded-t-lg bg-primary-500" style="height: 85%"></div>
+                  <div class="text-gray-400 text-xs">Fri</div>
+                </div>
+                <div class="flex-1 flex flex-col items-center gap-1">
+                  <div class="w-full rounded-t-lg bg-primary-300" style="height: 65%"></div>
+                  <div class="text-gray-400 text-xs">Sat</div>
+                </div>
+                <div class="flex-1 flex flex-col items-center gap-1">
+                  <div class="w-full rounded-t-lg bg-primary-600" style="height: 90%"></div>
+                  <div class="text-gray-400 text-xs">Sun</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Weak topics -->
+            <div class="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm">
+              <div class="text-gray-500 text-xs font-display font-semibold mb-3 uppercase tracking-wide">
+                Topic Accuracy
+              </div>
+              <div class="space-y-3">
+                <div>
+                  <div class="flex justify-between text-xs mb-1.5">
+                    <span class="text-gray-600 font-medium">Data Structures</span>
+                    <span class="text-primary-500 font-semibold">91%</span>
+                  </div>
+                  <div class="h-2 bg-gray-100 rounded-full overflow-hidden">
+                    <div class="h-full bg-primary-500 rounded-full" style="width: 91%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs mb-1.5">
+                    <span class="text-gray-600 font-medium">Algorithms</span>
+                    <span class="text-primary-500 font-semibold">78%</span>
+                  </div>
+                  <div class="h-2 bg-gray-100 rounded-full overflow-hidden">
+                    <div class="h-full bg-primary-400 rounded-full" style="width: 78%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs mb-1.5">
+                    <span class="text-gray-600 font-medium">Operating Systems</span>
+                    <span class="text-orange-500 font-semibold">64%</span>
+                  </div>
+                  <div class="h-2 bg-gray-100 rounded-full overflow-hidden">
+                    <div class="h-full bg-orange-400 rounded-full" style="width: 64%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Copy -->
+        <div class="reveal reveal-delay-2 order-1 lg:order-2">
+          <div
+            class="inline-flex items-center gap-2 bg-primary-50 border border-primary-100 rounded-full px-4 py-1.5 mb-6">
+            <span class="text-primary-700 text-sm font-display font-semibold">Stay Motivated</span>
+          </div>
+          <h2 class="font-display font-800 text-4xl sm:text-5xl text-gray-900 leading-tight mb-6">
+            Track Progress,<br />
+            <span class="text-primary-500">Stay Consistent</span>
+          </h2>
+          <p class="text-gray-500 text-lg leading-relaxed mb-8">
+            Knowing where you stand is half the battle. CSQuiz gives you deep
+            visibility into your strengths, weak spots, and study habits — so
+            you can improve with intention.
+          </p>
+
+          <div class="space-y-5">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center flex-shrink-0">
+                <span class="text-xl">🔥</span>
+              </div>
+              <div>
+                <div class="font-display font-700 text-gray-900 mb-1">
+                  Daily Streak Tracking
+                </div>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                  Stay motivated with daily streak counters. Miss a day and
+                  you'll want to protect your streak tomorrow.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <div>
+                <div class="font-display font-700 text-gray-900 mb-1">
+                  Performance Analytics
+                </div>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                  Visual charts and per-topic accuracy help you laser-focus on
+                  the areas that need attention.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+              </div>
+              <div>
+                <div class="font-display font-700 text-gray-900 mb-1">
+                  Dashboard Insights
+                </div>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                  See your score trends over time, total questions answered,
+                  and time invested in each subject.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       FREQUENTLY ASKED QUESTIONS
+  ═══════════════════════════════════════════════ -->
+  <section id="faq" class="bg-gray-50 py-20 sm:py-28">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8">
+      <div class="reveal text-center mb-16">
+        <div
+          class="inline-flex items-center gap-2 bg-primary-50 border border-primary-100 rounded-full px-4 py-1.5 mb-5">
+          <span class="text-primary-700 text-sm font-display font-semibold">FAQ</span>
+        </div>
+        <h2 class="font-display font-800 text-4xl sm:text-5xl text-gray-900 mb-4">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-gray-500 text-lg max-w-xl mx-auto">
+          Everything you need to know about CSQuiz before downloading.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <details
+          class="reveal reveal-delay-1 group bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+          <summary
+            class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-display font-700 text-gray-900 text-base hover:text-primary-600 transition-colors [&::-webkit-details-marker]:hidden">
+            Is CSQuiz completely free to use?
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-500 text-sm leading-relaxed -mt-2">
+            CSQuiz is free to download and use. The app is completely ad-free for the first 24 hours. After that, banner
+            ads appear on practice and test pages, and occasional interstitial ads show between topics (capped at one
+            every 3 minutes). You get 3 free tests per day — watch a short video ad to unlock more tests for that day.
+          </div>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details
+          class="reveal reveal-delay-1 group bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+          <summary
+            class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-display font-700 text-gray-900 text-base hover:text-primary-600 transition-colors [&::-webkit-details-marker]:hidden">
+            Can I practice CS MCQs offline without internet?
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-500 text-sm leading-relaxed -mt-2">
+            Yes. Download any subject once and practice entirely offline. Your progress, bookmarks, and test history are
+            stored locally on your device using encrypted storage. The app only needs internet to download new subjects
+            or check for content updates.
+          </div>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details
+          class="reveal reveal-delay-2 group bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+          <summary
+            class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-display font-700 text-gray-900 text-base hover:text-primary-600 transition-colors [&::-webkit-details-marker]:hidden">
+            Which computer science subjects are available?
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-500 text-sm leading-relaxed -mt-2">
+            CSQuiz currently includes 16 subjects with over 15,000 solved MCQs: C Programming (1,591), Object Oriented
+            Programming (1,350), Java Programming (1,335), Computer Networks (1,219), Python Programming (1,188),
+            Operating Systems (1,121), Computer Fundamentals (1,000), Cyber Security (1,000), Cloud Computing (990),
+            DBMS (871), Linux (847), Automata Theory (832), Artificial Intelligence (765), Computer Architecture (749),
+            SQL (639), and Machine Learning (620). New subjects are added regularly.
+          </div>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details
+          class="reveal reveal-delay-2 group bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+          <summary
+            class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-display font-700 text-gray-900 text-base hover:text-primary-600 transition-colors [&::-webkit-details-marker]:hidden">
+            Is CSQuiz useful for GATE CS preparation?
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-500 text-sm leading-relaxed -mt-2">
+            CSQuiz covers all major GATE CS subjects including Operating Systems, DBMS, Computer Networks, Theory of
+            Computation, and Computer Architecture. The timed test mode with configurable duration (10 to 120 minutes)
+            simulates real exam conditions. However, CSQuiz is not officially affiliated with GATE or any examination
+            board.
+          </div>
+        </details>
+
+        <!-- FAQ 5 -->
+        <details
+          class="reveal reveal-delay-3 group bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+          <summary
+            class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-display font-700 text-gray-900 text-base hover:text-primary-600 transition-colors [&::-webkit-details-marker]:hidden">
+            Do I need to create an account to use CSQuiz?
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-500 text-sm leading-relaxed -mt-2">
+            No. CSQuiz works without any login, sign-up, or account creation. Install and start practicing immediately.
+            Your progress is stored locally on your device.
+          </div>
+        </details>
+
+        <!-- FAQ 6 -->
+        <details
+          class="reveal reveal-delay-3 group bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+          <summary
+            class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-display font-700 text-gray-900 text-base hover:text-primary-600 transition-colors [&::-webkit-details-marker]:hidden">
+            Does CSQuiz provide explanations for MCQ answers?
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-500 text-sm leading-relaxed -mt-2">
+            Yes, every MCQ includes a detailed explanation. Explanations support code blocks and images where relevant,
+            helping you understand the concept — not just memorize the answer.
+          </div>
+        </details>
+
+        <!-- FAQ 7 -->
+        <details
+          class="reveal reveal-delay-4 group bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+          <summary
+            class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-display font-700 text-gray-900 text-base hover:text-primary-600 transition-colors [&::-webkit-details-marker]:hidden">
+            Can I take mock tests with a timer?
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-500 text-sm leading-relaxed -mt-2">
+            Yes. CSQuiz has a dedicated Test Mode where you can create custom tests — choose single or multiple
+            subjects, select specific categories, set question count, and enable a timer from 10 to 120 minutes. Results
+            show a detailed breakdown with correct, wrong, and unattempted counts plus explanations for every question.
+          </div>
+        </details>
+
+        <!-- FAQ 8 -->
+        <details
+          class="reveal reveal-delay-4 group bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+          <summary
+            class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-display font-700 text-gray-900 text-base hover:text-primary-600 transition-colors [&::-webkit-details-marker]:hidden">
+            How is CSQuiz different from other MCQ apps?
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-500 text-sm leading-relaxed -mt-2">
+            CSQuiz is built specifically for CS students with: deep topic drill-down (Subject → Category → Topic),
+            detailed explanations with code blocks, multi-subject test configuration, smart bookmarks that auto-organize
+            into a dedicated practice category, ability to resume uncompleted tests exactly where you left off, and
+            offline-first design with encrypted local storage. No login required.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       FINAL CTA SECTION
+  ═══════════════════════════════════════════════ -->
+  <section id="download" class="cta-bg relative overflow-hidden py-24 sm:py-32">
+    <!-- Decorative shapes -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-1/2 -right-1/4 w-[600px] h-[600px] rounded-full bg-white/5 blur-3xl"></div>
+      <div class="absolute -bottom-1/2 -left-1/4 w-[400px] h-[400px] rounded-full bg-white/5 blur-3xl"></div>
+      <div class="absolute inset-0" style="
+            background-image:
+              linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+              linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0.04) 1px,
+                transparent 1px
+              );
+            background-size: 50px 50px;
+          "></div>
+    </div>
+
+    <div class="relative max-w-4xl mx-auto px-5 sm:px-8 text-center">
+      <div class="reveal">
+        <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-8">
+          <div class="glow-dot" style="
+                background: white;
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+              "></div>
+          <span class="text-white/80 text-sm font-display font-semibold">Free · Works Offline · No Login</span>
+        </div>
+        <h2 class="font-display font-800 text-white text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6">
+          Start Practicing<br />
+          <span class="text-blue-200">Smarter Today</span>
+        </h2>
+        <p class="text-blue-100 text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
+          Join thousands of CS students who practice smarter with CSQuiz. Free
+          forever. Available offline. No account needed.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="https://play.google.com/store/apps/details?id=com.nirvionlabs.csquiz"
+            class="group inline-flex items-center gap-3 bg-white text-primary-700 font-display font-700 text-lg px-8 py-4 rounded-2xl shadow-2xl hover:shadow-white/25 transition-all duration-300 hover:-translate-y-1">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M3.60952 1.29524C3.26667 1.64762 3.06667 2.19048 3.06667 2.9V21.1C3.06667 21.8095 3.26667 22.3524 3.60952 22.7048L3.7 22.7952L13.3619 13.1333V12.9V12.6667L3.7 3.00476L3.60952 1.29524Z"
+                fill="#1e40af" />
+              <path
+                d="M16.5333 16.3048L13.3619 13.1333V12.9V12.6667L16.5429 9.49524L16.6524 9.5619L20.4286 11.7C21.5238 12.319 21.5238 13.3333 20.4286 13.9619L16.6524 16.1905L16.5333 16.3048Z"
+                fill="#3b82f6" />
+              <path
+                d="M16.6619 16.1905L13.3619 12.9L3.60952 22.7048C3.95238 23.0762 4.52381 23.119 5.17143 22.7619L16.6619 16.1905Z"
+                fill="#1e3a8a" />
+              <path
+                d="M16.6619 9.60952L5.17143 3.04762C4.52381 2.67143 3.95238 2.72381 3.60952 3.09524L13.3619 12.9L16.6619 9.60952Z"
+                fill="#2563eb" />
+            </svg>
+            Download CSQuiz
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Trust line -->
+        <div class="flex flex-wrap items-center justify-center gap-6 mt-10 text-blue-200/70 text-sm">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+              stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            Free to download
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+              stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            Ad-free for 24 hours
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+              stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            Works offline
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+              stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            No account needed
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer class="bg-navy-900 py-12">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <!-- Logo + developer -->
+        <div class="flex flex-col items-center md:items-start gap-2">
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 rounded-lg bg-primary-500 flex items-center justify-center">
+              <img src="./assets/logo8_dark.png" alt="CSQuiz Logo" class="object-cover" />
+            </div>
+            <span class="font-display font-700 text-white">CSQuiz</span>
+          </div>
+          <p class="text-gray-500 text-sm">
+            Built with ♥ by
+            <span class="text-gray-400 font-medium">Nirvion Labs</span>
+          </p>
+        </div>
+
+        <!-- Links -->
+        <div class="flex items-center gap-8">
+          <a href="./privacy-policy/" class="text-gray-500 hover:text-gray-300 text-sm transition-colors">Privacy
+            Policy</a>
+          <div class="w-px h-4 bg-white/10"></div>
+          <a href="./terms-of-service/" class="text-gray-500 hover:text-gray-300 text-sm transition-colors">Terms of
+            Service</a>
+          <div class="w-px h-4 bg-white/10"></div>
+          <a href="mailto:nirvionlabs@gmail.com"
+            class="text-gray-500 hover:text-gray-300 text-sm transition-colors">Contact</a>
+        </div>
+
+        <!-- Copyright -->
+        <p class="text-gray-600 text-sm text-center md:text-right">
+          © 2026 Nirvion Labs.<br class="md:hidden" />
+          All rights reserved.
+        </p>
+      </div>
+
+      <div class="divider mt-8"></div>
+
+      <p class="text-center text-gray-700 text-xs mt-6">
+        CSQuiz is designed for CS students preparing for university exams,
+        competitive tests, and technical interviews.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════
+       SCRIPTS
+  ═══════════════════════════════════════════════ -->
+  <script>
+    // ── SCROLL REVEAL ──
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add("visible");
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+    );
+    document
+      .querySelectorAll(".reveal")
+      .forEach((el) => observer.observe(el));
+
+    // ── MOBILE NAV ──
+    document.querySelectorAll("#mobile-menu a").forEach((link) => {
+      link.addEventListener("click", () =>
+        document.getElementById("mobile-menu").classList.add("hidden"),
+      );
+    });
+
+    // ── NAV SCROLL ──
+    const nav = document.querySelector("nav");
+    window.addEventListener("scroll", () => {
+      nav.style.borderBottomColor =
+        window.scrollY > 20
+          ? "rgba(59,130,246,0.15)"
+          : "rgba(59,130,246,0.1)";
+    });
+
+    // ── DARK / LIGHT MODE TOGGLE ──
+    const screenshotsPreview = document.getElementById("screenshots-preview");
+    const previewThemeToggle = document.getElementById(
+      "preview-theme-toggle",
+    );
+    const previewThemeLabel = document.getElementById("preview-theme-label");
+
+    function setPreviewTheme(theme) {
+      if (!screenshotsPreview || !previewThemeToggle || !previewThemeLabel)
+        return;
+      const nextTheme = theme === "dark" ? "dark" : "light";
+      const isLight = nextTheme === "light";
+      screenshotsPreview.setAttribute("data-shot-theme", nextTheme);
+      previewThemeToggle.classList.toggle("is-light", isLight);
+      previewThemeLabel.textContent = isLight ? "Light" : "Dark";
+      previewThemeToggle.setAttribute("aria-checked", String(!isLight));
+
+      // Update screenshot visibility based on theme
+      updateScreenshotVisibility();
+    }
+
+    function updateScreenshotVisibility() {
+      const currentTheme =
+        screenshotsPreview?.getAttribute("data-shot-theme") || "light";
+      const currentScreen = window.currentScreenIndex || 0;
+
+      document.querySelectorAll(".screenshot-screen").forEach((screen) => {
+        const screenTheme = screen.getAttribute("data-theme");
+        const screenNum = parseInt(screen.getAttribute("data-screen"));
+
+        if (screenTheme === currentTheme && screenNum === currentScreen) {
+          screen.classList.add("active");
+        } else {
+          screen.classList.remove("active");
+        }
+      });
+    }
+
+    if (previewThemeToggle) {
+      previewThemeToggle.addEventListener("click", () => {
+        const currentTheme =
+          screenshotsPreview?.getAttribute("data-shot-theme") === "dark"
+            ? "dark"
+            : "light";
+        setPreviewTheme(currentTheme === "light" ? "dark" : "light");
+      });
+      setPreviewTheme(
+        screenshotsPreview?.getAttribute("data-shot-theme") || "light",
+      );
+    }
+
+    // Initialize current screen index
+    window.currentScreenIndex = 0;
+
+    // Initialize screenshot visibility (with null check)
+    if (typeof updateScreenshotVisibility === "function") {
+      setTimeout(updateScreenshotVisibility, 0);
+    }
+
+    // ── SCREENSHOTS INTERACTION ──
+    const screenData = [
+      {
+        title: "Welcome Home",
+        body: "Your personal study hub. See your streak, pick a subject, and jump straight into practice — zero friction.",
+      },
+      {
+        title: "Choose a Subject",
+        body: "Browse all available CS subjects. Download any one for offline use — stored right on your device.",
+      },
+      {
+        title: "Practice Mode",
+        body: "Answer MCQs at your pace. Tap an option and get an instant explanation — e.",
+      },
+      {
+        title: "Test Mode",
+        body: "Race against the clock. No hints, no peeking — just you and the question. Submit and see your score.",
+      },
+      {
+        title: "Your Dashboard",
+        body: "Data-driven studying. Your dashboard surfaces weak spots you'd otherwise never notice until exam day.",
+      },
+    ];
+
+    function switchScreen(index) {
+      window.currentScreenIndex = index;
+
+      // Tabs
+      document
+        .querySelectorAll(".screen-tab")
+        .forEach((t, i) => t.classList.toggle("active", i === index));
+      // Dots
+      document
+        .querySelectorAll(".screen-dot")
+        .forEach((d, i) => d.classList.toggle("active", i === index));
+
+      // Update screenshot visibility
+      updateScreenshotVisibility();
+
+      // Left descriptions
+      document.querySelectorAll(".screen-desc").forEach((d) => {
+        const isTarget = parseInt(d.dataset.desc) === index;
+        d.classList.toggle("hidden", !isTarget);
+        if (isTarget) {
+          // Stagger feature items
+          d.querySelectorAll(".feat-item").forEach((item, i) => {
+            item.classList.remove("vis");
+            setTimeout(() => item.classList.add("vis"), 80 + i * 100);
+          });
+        }
+      });
+      // Right descriptions
+      document.querySelectorAll(".screen-desc-r").forEach((d) => {
+        const isTarget = parseInt(d.dataset.descR) === index;
+        d.classList.toggle("hidden", !isTarget);
+        if (isTarget) {
+          d.querySelectorAll(".feat-item").forEach((item, i) => {
+            item.classList.remove("vis");
+            setTimeout(() => item.classList.add("vis"), 80 + i * 100);
+          });
+        }
+      });
+
+      // Mobile description
+      const mTitle = document.getElementById("mobile-desc-title");
+      const mBody = document.getElementById("mobile-desc-body");
+      if (mTitle) mTitle.textContent = screenData[index].title;
+      if (mBody) mBody.textContent = screenData[index].body;
+    }
+
+    // Tab clicks
+    document.querySelectorAll(".screen-tab").forEach((tab, i) => {
+      tab.addEventListener("click", () => switchScreen(i));
+    });
+    // Dot clicks
+    document.querySelectorAll(".screen-dot").forEach((dot, i) => {
+      dot.addEventListener("click", () => switchScreen(i));
+    });
+
+    // Auto-cycle screenshots every 3.5s
+    let screenIndex = 0;
+    let cycleTimer = setInterval(() => {
+      screenIndex = (screenIndex + 1) % 5;
+      switchScreen(screenIndex);
+    }, 5500);
+
+    // Pause on tab hover
+    document.querySelectorAll(".screen-tab, .phone-wrap").forEach((el) => {
+      el.addEventListener("mouseenter", () => clearInterval(cycleTimer));
+      el.addEventListener("mouseleave", () => {
+        clearInterval(cycleTimer);
+        cycleTimer = setInterval(() => {
+          screenIndex = (screenIndex + 1) % 5;
+          switchScreen(screenIndex);
+        }, 5500);
+      });
+    });
+
+    // Init first screen feature items
+    setTimeout(() => {
+      document
+        .querySelectorAll(
+          '.screen-desc[data-desc="0"] .feat-item, .screen-desc-r[data-desc-r="0"] .feat-item',
+        )
+        .forEach((item, i) => {
+          setTimeout(() => item.classList.add("vis"), 500 + i * 120);
+        });
+    }, 100);
+  </script>
+</body>
+
+</html>

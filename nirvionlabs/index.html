@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nirvion Labs — Focused Software, Built Right</title>
+  <meta name="description"
+    content="Nirvion Labs is an indie software studio from Mumbai building focused, privacy-first apps for students and developers. No bloat. No dark patterns." />
+  <meta name="keywords" content="Nirvion Labs, indie software, privacy-first apps, CSQuiz, Android apps, Mumbai" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    /* ── RESET & BASE ── */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #060d1b;
+      color: #eef4ff;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Sora', sans-serif;
+    }
+
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #040a14;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(59, 130, 246, 0.3);
+      border-radius: 4px;
+    }
+
+    /* ── TOKENS ── */
+    :root {
+      --blue: #3B82F6;
+      --blue-dark: #2563eb;
+      --blue-light: #60a5fa;
+      --surface: #0f1929;
+      --border: #1a2d47;
+      --text-primary: #eef4ff;
+      --text-secondary: #7a93b0;
+      --text-muted: #3d5470;
+    }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #040a14;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(59, 130, 246, 0.3);
+      border-radius: 4px;
+    }
+
+    /* ── NAV ── */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      background: rgba(6, 13, 27, 0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(59, 130, 246, 0.07);
+      transition: border-color 0.3s;
+    }
+
+    .nav.scrolled {
+      border-bottom-color: rgba(59, 130, 246, 0.18);
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 14px rgba(59, 130, 246, 0.35);
+      flex-shrink: 0;
+    }
+
+    .logo-icon svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    .logo-text {
+      font-family: 'Sora', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .logo-text span {
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      font-family: 'Sora', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+    }
+
+    .nav-cta {
+      display: none;
+      background: rgba(59, 130, 246, 0.12);
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      color: var(--blue-light);
+      font-family: 'Sora', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 7px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .nav-cta:hover {
+      background: rgba(59, 130, 246, 0.2);
+      color: white;
+    }
+
+    .mob-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text-secondary);
+      padding: 6px;
+      display: flex;
+    }
+
+    .mob-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .mob-menu {
+      display: none;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      background: rgba(6, 13, 27, 0.97);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px 24px;
+    }
+
+    .mob-menu.open {
+      display: block;
+    }
+
+    .mob-menu ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .mob-menu a {
+      color: var(--text-secondary);
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .mob-menu a:hover {
+      color: var(--text-primary);
+    }
+
+    .mob-menu .mob-cta {
+      margin-top: 8px;
+      display: block;
+      text-align: center;
+      background: var(--blue);
+      color: white;
+      padding: 11px 20px;
+      border-radius: 12px;
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /* ── CHIP ── */
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.22);
+      border-radius: 30px;
+      padding: 5px 14px;
+      font-family: 'Sora', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--blue-light);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .chip-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--blue-light);
+      box-shadow: 0 0 6px rgba(96, 165, 250, 0.8);
+      animation: blink 2.4s ease-in-out infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.3;
+      }
+    }
+
+    /* ── BUTTONS ── */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+      color: white;
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 12px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 6px 22px rgba(59, 130, 246, 0.35);
+      transition: transform 0.22s, box-shadow 0.22s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(59, 130, 246, 0.5);
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--text-secondary);
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 11px 22px;
+      border-radius: 12px;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      transition: all 0.22s;
+    }
+
+    .btn-ghost:hover {
+      color: var(--text-primary);
+      border-color: rgba(59, 130, 246, 0.35);
+      background: rgba(59, 130, 246, 0.06);
+    }
+
+    /* ── DIVIDERS ── */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+    }
+
+    /* ── REVEAL ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.vis {
+      opacity: 1;
+      transform: none;
+    }
+
+    .d1 {
+      transition-delay: 0.08s;
+    }
+
+    .d2 {
+      transition-delay: 0.16s;
+    }
+
+    .d3 {
+      transition-delay: 0.24s;
+    }
+
+    .d4 {
+      transition-delay: 0.32s;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 60px;
+      position: relative;
+      overflow: hidden;
+      background: #060d1b;
+      background-image:
+        radial-gradient(ellipse 80% 50% at 50% -8%, rgba(59, 130, 246, 0.14) 0%, transparent 55%),
+        radial-gradient(ellipse 40% 30% at 8% 78%, rgba(37, 99, 235, 0.07) 0%, transparent 50%),
+        linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+      background-size: auto, auto, 52px 52px, 52px 52px;
+    }
+
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(80px);
+    }
+
+    @keyframes drift {
+
+      0%,
+      100% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      40% {
+        transform: translate(16px, -14px) scale(1.04);
+      }
+
+      70% {
+        transform: translate(-12px, 18px) scale(0.97);
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(26px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 52px 24px 64px;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-content {
+      max-width: 700px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      color: var(--text-primary);
+      font-weight: 800;
+      font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+      line-height: 1.05;
+      letter-spacing: -0.028em;
+      margin: 0 0 20px;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.1s ease both;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(130deg, #60a5fa 0%, #3B82F6 50%, #818cf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      color: var(--text-secondary);
+      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      line-height: 1.75;
+      max-width: 520px;
+      margin: 0 auto 36px;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.2s ease both;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.3s ease both;
+    }
+
+    /* ── STATS ROW ── */
+    .stats-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 6px 0;
+      margin-top: 48px;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.45s ease both;
+    }
+
+    .stat {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 0 18px;
+    }
+
+    .stat:first-child {
+      padding-left: 0;
+    }
+
+    .stat-val {
+      font-family: 'Sora', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .stat-sep {
+      width: 1px;
+      height: 14px;
+      background: var(--border);
+    }
+
+    .stat-live {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #4ade80;
+      box-shadow: 0 0 8px rgba(74, 222, 128, 0.65);
+    }
+
+    .stat-label {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    /* ── SCROLL HINT ── */
+    .scroll-hint {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.9s ease both;
+    }
+
+    .scroll-hint span {
+      font-family: 'Sora', sans-serif;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 26px;
+      background: linear-gradient(to bottom, rgba(59, 130, 246, 0.5), transparent);
+    }
+
+    /* ── SECTION BASE ── */
+    .section {
+      padding: 88px 0;
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .section-header p {
+      color: var(--text-secondary);
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 460px;
+      margin: 12px auto 0;
+    }
+
+    /* ── SECTION H2 ── */
+    .s-title {
+      font-weight: 800;
+      font-size: clamp(1.8rem, 3.8vw, 2.7rem);
+      line-height: 1.12;
+      letter-spacing: -0.022em;
+      margin: 12px 0 0;
+    }
+
+    .s-title.dark {
+      color: var(--text-primary);
+    }
+
+    .s-title.light {
+      color: #0f172a;
+    }
+
+    /* ── MARQUEE ── */
+    .marquee-section {
+      background: #060d1b;
+      padding: 16px 0;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 6px 14px;
+      font-family: 'Sora', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .marquee-track {
+      overflow: hidden;
+      mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+      -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+    }
+
+    .marquee-inner {
+      display: flex;
+      gap: 10px;
+      width: max-content;
+      animation: marquee 28s linear infinite;
+    }
+
+    /* ── PRODUCT CARD ── */
+    .product-section {
+      background: var(--surface);
+    }
+
+    .product-card {
+      background: #060d1b;
+      border: 1.5px solid var(--border);
+      border-radius: 24px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .product-card:hover {
+      border-color: rgba(59, 130, 246, 0.35);
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+    }
+
+    .product-accent {
+      height: 3px;
+      background: linear-gradient(90deg, #3B82F6, #60a5fa, #818cf8);
+    }
+
+    .product-body {
+      padding: 36px 40px 32px;
+    }
+
+    .product-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .app-icon {
+      width: 56px;
+      height: 56px;
+      flex-shrink: 0;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #1e40af, var(--blue));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 28px rgba(59, 130, 246, 0.38);
+    }
+
+    .app-icon svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    .app-name {
+      font-family: 'Sora', sans-serif;
+      font-weight: 800;
+      font-size: 24px;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+    }
+
+    .live-badge {
+      background: rgba(74, 222, 128, 0.12);
+      border: 1px solid rgba(74, 222, 128, 0.28);
+      color: #4ade80;
+      font-family: 'Sora', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 20px;
+      letter-spacing: 0.07em;
+    }
+
+    .app-sub {
+      color: var(--text-muted);
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .product-desc {
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.8;
+      margin: 18px 0 22px;
+      max-width: 600px;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin: 0 0 28px;
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+
+    .feature-list li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      background: var(--blue-light);
+    }
+
+    .product-footer {
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .product-links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .product-links a {
+      color: var(--text-muted);
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .product-links a:hover {
+      color: var(--text-secondary);
+    }
+
+    .btn-detail {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--blue-light);
+      font-family: 'Sora', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: gap 0.2s;
+    }
+
+    .btn-detail:hover {
+      gap: 10px;
+    }
+
+    .btn-detail svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    /* ── SCREENSHOT PLACEHOLDER ── */
+    .screenshot-wrap {
+      background: linear-gradient(160deg, #0a1628 0%, #0f1929 100%);
+      border-left: 1.5px solid var(--border);
+      display: none;
+      /* shown on large screens via media query */
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding: 28px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .screenshot-inner {
+      width: 148px;
+      height: 290px;
+      border-radius: 18px;
+      background: #141f35;
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    /* Second phone is slightly smaller and offset */
+    .screenshot-inner:nth-child(2) {
+      width: 132px;
+      height: 256px;
+      opacity: 0.65;
+      transform: scale(0.97);
+    }
+
+    .screenshot-inner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, rgba(59, 130, 246, 0.08), transparent 60%);
+    }
+
+    .screenshot-stub {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .screenshot-stub svg {
+      width: 28px;
+      height: 28px;
+      color: rgba(59, 130, 246, 0.35);
+      margin-bottom: 8px;
+    }
+
+    .screenshot-stub p {
+      color: var(--text-muted);
+      font-family: 'Sora', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    /* ── VALUES ── */
+    .values-section {
+      background: #f5f8fc;
+    }
+
+    .values-section .chip {
+      background: rgba(37, 99, 235, 0.08);
+      border-color: rgba(37, 99, 235, 0.18);
+      color: #2563eb;
+    }
+
+    .values-section .chip-dot {
+      background: #2563eb;
+      box-shadow: 0 0 6px rgba(37, 99, 235, 0.6);
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .value-card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 28px;
+      transition: transform 0.28s, border-color 0.28s, box-shadow 0.28s;
+    }
+
+    .value-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(59, 130, 246, 0.28);
+      box-shadow: 0 14px 36px rgba(59, 130, 246, 0.08);
+    }
+
+    .value-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+
+    .value-card h3 {
+      color: #0f172a;
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      margin: 0 0 8px;
+    }
+
+    .value-card p {
+      color: #475569;
+      font-size: 13.5px;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* ── ABOUT ── */
+    .about-section {
+      background: #060d1b;
+    }
+
+    .about-inner {
+      max-width: 660px;
+    }
+
+    .about-inner p {
+      color: var(--text-secondary);
+      font-size: 16px;
+      line-height: 1.82;
+      margin: 0 0 0;
+    }
+
+    .about-inner p span {
+      color: var(--blue-light);
+      font-weight: 600;
+    }
+
+    /* ── FUTURE VISION ── */
+    .vision-line {
+      text-align: center;
+      padding: 32px 24px;
+      background: #060d1b;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .vision-line p {
+      color: var(--text-muted);
+      font-family: 'Sora', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      font-style: italic;
+    }
+
+    .vision-line p span {
+      color: var(--text-secondary);
+    }
+
+    /* ── CONTACT ── */
+    .contact-section {
+      background: linear-gradient(135deg, #0f2040 0%, #1e3a8a 45%, #1e40af 100%);
+      padding: 88px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+
+    .contact-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 24px;
+      text-align: center;
+    }
+
+    .contact-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 30px;
+      padding: 5px 15px;
+      margin-bottom: 28px;
+    }
+
+    .contact-badge-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: white;
+      box-shadow: 0 0 8px white;
+      animation: blink 2s infinite;
+    }
+
+    .contact-badge span {
+      color: rgba(255, 255, 255, 0.75);
+      font-family: 'Sora', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .contact-section h2 {
+      color: white;
+      font-family: 'Sora', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      line-height: 1.1;
+      margin: 0 0 16px;
+    }
+
+    .contact-section h2 span {
+      color: rgba(191, 219, 254, 0.85);
+    }
+
+    .contact-section>*>p {
+      color: rgba(191, 219, 254, 0.65);
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 480px;
+      margin: 0 auto 36px;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .btn-mail {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: white;
+      color: #1e3a8a;
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 13px 26px;
+      border-radius: 14px;
+      text-decoration: none;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
+      transition: transform 0.22s, box-shadow 0.22s;
+    }
+
+    .btn-mail:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-view {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 14px;
+      text-decoration: none;
+      transition: background 0.22s;
+    }
+
+    .btn-view:hover {
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #040a14;
+      padding: 28px 24px;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .footer-logo span {
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--text-primary);
+    }
+
+    .footer-logo small {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .footer-copy {
+      color: var(--text-muted);
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--text-secondary);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (min-width: 768px) {
+      .nav-links {
+        display: flex;
+      }
+
+      .nav-cta {
+        display: inline-flex;
+      }
+
+      .mob-btn {
+        display: none;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .product-card {
+        grid-template-columns: 1fr 340px;
+      }
+
+      .screenshot-wrap {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ══════════════ NAV ══════════════ -->
+  <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="Nirvion Labs home">
+        <div class="logo-icon">
+          <svg fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <span class="logo-text">Nirvion <span>Labs</span></span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#apps">Apps</a></li>
+        <li><a href="#values">Values</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div style="display:flex;align-items:center;gap:10px;">
+        <a href="#contact" class="nav-cta">Get in Touch</a>
+        <button class="mob-btn" id="mob-btn" aria-label="Open menu" aria-expanded="false">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mob-menu" id="mob-menu" role="dialog" aria-label="Mobile menu">
+    <ul>
+      <li><a href="#apps" onclick="closeMob()">Apps</a></li>
+      <li><a href="#values" onclick="closeMob()">Values</a></li>
+      <li><a href="#about" onclick="closeMob()">About</a></li>
+      <li><a href="#contact" onclick="closeMob()">Contact</a></li>
+    </ul>
+    <a href="#contact" class="mob-cta" onclick="closeMob()">Get in Touch</a>
+  </div>
+
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section class="hero" id="hero" aria-label="Hero">
+    <div class="orb"
+      style="width:480px;height:480px;background:radial-gradient(circle,rgba(59,130,246,0.12),transparent 70%);top:-15%;left:-8%;animation:drift 20s ease-in-out infinite;">
+    </div>
+    <div class="orb"
+      style="width:320px;height:320px;background:radial-gradient(circle,rgba(37,99,235,0.09),transparent 70%);bottom:-5%;right:-5%;animation:drift 24s ease-in-out 6s infinite;">
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-content">
+
+        <div class="chip" style="margin-bottom:26px;opacity:0;animation:fadeUp 0.7s 0s ease both;">
+          <div class="chip-dot"></div>
+          Indie Software Studio · Mumbai, India
+        </div>
+
+        <h1>Software that knows<br /><em>when to stop.</em></h1>
+
+        <p class="hero-sub">
+          We build focused apps — no bloat, no dark patterns, no accounts you didn't ask for. Just software that does
+          what it promises.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#apps" class="btn-primary" id="cta-view-apps">
+            View Apps
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <a href="#about" class="btn-ghost" id="cta-about">About</a>
+        </div>
+
+        <!-- Stats row -->
+        <div class="stats-row">
+          <div class="stat">
+            <div class="stat-live"></div>
+            <span class="stat-val">1 App Live</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat">
+            <span class="stat-label">15,000+ MCQs</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat">
+            <span class="stat-label">Zero PII Collected</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat">
+            <span class="stat-label">Made in India 🇮🇳</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+
+  <!-- ══════════════ MARQUEE ══════════════ -->
+  <div class="marquee-section" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-inner">
+
+        <!-- Core Identity -->
+        <div class="tag">🔒 Privacy-First</div>
+        <div class="tag">🛡️ Zero PII</div>
+        <div class="tag">🚫 No Login Required</div>
+        <div class="tag">🔍 No Tracking</div>
+
+        <!-- Philosophy -->
+        <div class="tag">⚡ No Bloat</div>
+        <div class="tag">🧹 Minimal by Design</div>
+        <div class="tag">🎯 One Job Done Well</div>
+        <div class="tag">🧠 Focused Apps</div>
+
+        <!-- Craft & Build -->
+        <div class="tag">❤️ Built with Care</div>
+        <div class="tag">🛠️ Indie Built</div>
+        <div class="tag">🚀 Fast & Lightweight</div>
+
+        <!-- Product Hint (keep very few) -->
+        <div class="tag">📚 MCQ Practice</div>
+
+        <!-- Identity -->
+        <div class="tag">🇮🇳 Made in India</div>
+
+        <!-- DUPLICATE FOR SMOOTH LOOP -->
+
+        <div class="tag">🔒 Privacy-First</div>
+        <div class="tag">🛡️ Zero PII</div>
+        <div class="tag">🚫 No Login Required</div>
+        <div class="tag">🔍 No Tracking</div>
+
+        <div class="tag">⚡ No Bloat</div>
+        <div class="tag">🧹 Minimal by Design</div>
+        <div class="tag">🎯 One Job Done Well</div>
+        <div class="tag">🧠 Focused Apps</div>
+
+        <div class="tag">❤️ Built with Care</div>
+        <div class="tag">🛠️ Indie Built</div>
+        <div class="tag">🚀 Fast & Lightweight</div>
+
+        <div class="tag">📚 MCQ Practice</div>
+        <div class="tag">🇮🇳 Made in India</div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+
+  <!-- ══════════════ PRODUCT HIGHLIGHT ══════════════ -->
+  <section id="apps" class="section product-section" aria-label="Our Apps">
+    <div class="section-inner">
+
+      <div class="section-header reveal">
+        <div class="chip" style="margin-bottom:16px;">Our Apps</div>
+        <h2 class="s-title dark">What we've shipped</h2>
+        <p>One app. Focused. Useful. Live.</p>
+      </div>
+
+      <div class="product-card reveal d1">
+
+
+        <!-- Left: product info -->
+        <div class="product-body">
+
+          <div class="product-meta">
+            <div class="app-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
+            <div>
+              <div style="display:flex;align-items:center;gap:9px;margin-bottom:5px;">
+                <span class="app-name">CSQuiz</span>
+                <span class="live-badge">● LIVE</span>
+              </div>
+              <div class="app-sub">by Nirvion Labs &nbsp;·&nbsp; Free &nbsp;·&nbsp; Android</div>
+            </div>
+          </div>
+
+          <p class="product-desc">
+            Master Computer Science with structured MCQ practice. Topic-wise questions, timed tests, and progress
+            tracking — built to make studying stick without friction.
+          </p>
+
+          <ul class="feature-list" aria-label="Key features">
+            <li>15,000+ curated MCQs across 16 CS subjects</li>
+            <li>No login, no account, works offline</li>
+            <li>Timed tests with streaks and a progress dashboard</li>
+          </ul>
+
+          <div class="product-footer">
+            <div class="product-links">
+              <a href="../privacy-policy/" aria-label="CSQuiz privacy policy">Privacy &amp; Terms ↗</a>
+            </div>
+            <a href="../" class="btn-detail" id="cta-csquiz-details" aria-label="View CSQuiz details">
+              View Details
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right: screenshot placeholder -->
+        <div class="screenshot-wrap" aria-hidden="true">
+
+          <!-- Primary phone -->
+          <div class="screenshot-inner">
+            <div class="screenshot-stub">
+              <img src="home_page_light.png" style="object-fit:cover;width:100%;height:100%;border-radius:16px;">
+            </div>
+          </div>
+
+          <!-- Secondary phone (below) -->
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+
+  <!-- ══════════════ VALUES ══════════════ -->
+  <section id="values" class="section values-section" aria-label="Our Values">
+    <div class="section-inner">
+
+      <div class="section-header reveal">
+        <div class="chip" style="margin-bottom:16px;">How We Think</div>
+        <h2 class="s-title light">Principles we refuse<br />to compromise</h2>
+        <p style="color:#475569;">Not marketing words. Constraints we actually build against every day.</p>
+      </div>
+
+      <div class="values-grid">
+
+        <div class="value-card reveal d1">
+          <div class="value-icon" style="background:#fef3c7;border:1px solid #fde68a;">🚫</div>
+          <h3>No Accounts, No Drama</h3>
+          <p>Install and use immediately. No sign-up forms, no verification emails, no forgotten passwords. We don't
+            want your identity.</p>
+        </div>
+
+        <div class="value-card reveal d2">
+          <div class="value-icon" style="background:#dcfce7;border:1px solid #bbf7d0;">🛡️</div>
+          <h3>Privacy by Default</h3>
+          <p>Your data is yours. We document what we collect, why, and how — in plain English. If we don't need it, we
+            don't touch it.</p>
+        </div>
+
+        <div class="value-card reveal d3">
+          <div class="value-icon" style="background:#ede9fe;border:1px solid #ddd6fe;">🎯</div>
+          <h3>One Job, Done Well</h3>
+          <p>We resist feature creep. Each app does exactly what it promises — nothing more, no discovery tabs, no "you
+            might also like".</p>
+        </div>
+
+        <div class="value-card reveal d1">
+          <div class="value-icon" style="background:#dbeafe;border:1px solid #bfdbfe;">✨</div>
+          <h3>Craft Over Speed</h3>
+          <p>We'd rather take another week to get it right than ship something mediocre on schedule. Good software is
+            worth the wait.</p>
+        </div>
+
+        <div class="value-card reveal d2">
+          <div class="value-icon" style="background:#fce7f3;border:1px solid #fbcfe8;">💬</div>
+          <h3>Honest Communication</h3>
+          <p>Our changelogs say what actually changed. Our policies say what we actually do. No spin, no corporate
+            speak.</p>
+        </div>
+
+        <div class="value-card reveal d3">
+          <div class="value-icon" style="background:#d1fae5;border:1px solid #a7f3d0;">🚀</div>
+          <h3>Ship When Ready</h3>
+          <p>Not when a deadline says so. We release when we'd personally recommend it to a friend without a second
+            thought.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+
+  <!-- ══════════════ ABOUT ══════════════ -->
+  <section id="about" class="section about-section" aria-label="About Nirvion Labs">
+    <div class="section-inner">
+
+      <div class="reveal" style="margin-bottom:20px;">
+        <div class="chip">About</div>
+      </div>
+
+      <div class="about-inner reveal d1">
+        <h2 class="s-title dark" style="margin:0 0 20px;">Small team.<br />Big focus.</h2>
+        <p>
+          Nirvion Labs is an indie software studio based in <span>Mumbai, India</span>.
+          We're a small team building focused tools for students and developers — at a pace that lets us care about the
+          details.
+          Every release has our name on it, and we take that seriously.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════ FUTURE VISION ══════════════ -->
+  <div class="vision-line" aria-label="Future vision">
+    <p><span>We're building more focused tools for learning and productivity.</span> More soon.</p>
+  </div>
+
+
+  <!-- ══════════════ CONTACT ══════════════ -->
+  <section id="contact" class="contact-section reveal" aria-label="Contact">
+    <div class="contact-inner">
+
+      <div class="contact-badge">
+        <div class="contact-badge-dot"></div>
+        <span>Open to conversations</span>
+      </div>
+
+      <h2>Have an idea?<br /><span>Let's talk.</span></h2>
+
+      <p>Whether you want to collaborate, share feedback on our apps, or just say hello — we'd love to hear from you.
+      </p>
+
+      <div class="contact-actions">
+        <a href="mailto:nirvionlabs@gmail.com" class="btn-mail" id="cta-email" aria-label="Email Nirvion Labs">
+          <span>✉️</span> nirvionlabs@gmail.com
+        </a>
+        <a href="../" class="btn-view" id="cta-view-csquiz">
+          View CSQuiz
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <div class="logo-icon" style="width:28px;height:28px;border-radius:8px;">
+          <svg style="width:13px;height:13px;" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <span>Nirvion Labs</span>
+        <small>· Indie Software Studio</small>
+      </div>
+
+
+      <p class="footer-copy">© 2026 Nirvion Labs. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+  <script>
+    /* ── Mobile nav ── */
+    const mobBtn = document.getElementById('mob-btn');
+    const mobMenu = document.getElementById('mob-menu');
+
+    function closeMob() {
+      mobMenu.classList.remove('open');
+      mobBtn.setAttribute('aria-expanded', 'false');
+    }
+    mobBtn.addEventListener('click', () => {
+      const open = mobMenu.classList.toggle('open');
+      mobBtn.setAttribute('aria-expanded', String(open));
+    });
+
+    /* ── Nav scroll style ── */
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 24);
+    }, { passive: true });
+
+    /* ── Scroll reveal ── */
+    const ro = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); }),
+      { threshold: 0.07, rootMargin: '0px 0px -28px 0px' }
+    );
+    document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+  </script>
+
+</body>
+
+</html>

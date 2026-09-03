@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - CSQuiz | Nirvion Labs</title>
+  <meta
+    name="description"
+    content="Read the CSQuiz Privacy Policy to understand what data is stored locally, how ads work, and which third-party services are used."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --bg: #050d1a;
+      --bg-soft: #050d1a;
+      --surface: rgba(12, 24, 48, 0.84);
+      --border: rgba(118, 162, 255, 0.18);
+      --border-strong: rgba(118, 162, 255, 0.28);
+      --text: #f4f7ff;
+      --text-soft: #bfd0ee;
+      --text-muted: #7f94b8;
+      --accent: #79a9ff;
+      --accent-strong: #377dff;
+      --accent-soft: rgba(55, 125, 255, 0.15);
+      --hero-a: rgba(55, 125, 255, 0.22);
+      --hero-b: rgba(29, 206, 199, 0.18);
+      --shadow: 0 24px 80px rgba(3, 9, 20, 0.42);
+      --toc-bg: rgba(9, 17, 31, 0.72);
+    }
+
+    [data-theme="light"] {
+      --bg: #f5f8ff;
+      --bg-soft: #ebf1fb;
+      --surface: rgba(255, 255, 255, 0.92);
+      --border: rgba(48, 100, 198, 0.14);
+      --border-strong: rgba(48, 100, 198, 0.26);
+      --text: #0b1730;
+      --text-soft: #334a73;
+      --text-muted: #6c7fa1;
+      --accent: #2563eb;
+      --accent-strong: #1d4ed8;
+      --accent-soft: rgba(37, 99, 235, 0.1);
+      --hero-a: rgba(37, 99, 235, 0.14);
+      --hero-b: rgba(20, 184, 166, 0.12);
+      --shadow: 0 18px 50px rgba(19, 41, 79, 0.08);
+      --toc-bg: rgba(255, 255, 255, 0.84);
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "DM Sans", sans-serif;
+      color: var(--text-soft);
+      background:
+        radial-gradient(circle at top left, var(--hero-a), transparent 32%),
+        radial-gradient(circle at top right, var(--hero-b), transparent 26%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+      min-height: 100vh;
+    }
+
+    h1,
+    h2,
+    h3,
+    .brand,
+    .chip,
+    .toc-title,
+    .pill,
+    .cta-link,
+    .theme-toggle,
+    .nav-links a {
+      font-family: "Sora", sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page-grid::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3), transparent 95%);
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(22px);
+      background: rgba(7, 17, 31, 0.72);
+      border-bottom: 1px solid var(--border);
+    }
+
+    [data-theme="light"] .nav {
+      background: rgba(245, 248, 255, 0.8);
+    }
+
+    .nav-inner,
+    .hero,
+    .content,
+    .footer-inner {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .nav-inner {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .back-link {
+      color: var(--accent);
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .brand {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .brand-sub {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a,
+    .theme-toggle {
+      border: 1px solid transparent;
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: 0.22s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"],
+    .theme-toggle:hover {
+      color: var(--text);
+      background: var(--accent-soft);
+      border-color: var(--border-strong);
+    }
+
+    .theme-toggle {
+      appearance: none;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .hero {
+      padding: 86px 0 42px;
+      display: grid;
+      gap: 28px;
+    }
+
+    .hero-copy {
+      max-width: 760px;
+    }
+
+    .chip-row,
+    .hero-meta,
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(10, 21, 40, 0.66);
+      border: 1px solid var(--border);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    [data-theme="light"] .chip {
+      background: rgba(255, 255, 255, 0.74);
+    }
+
+    .hero h1 {
+      margin: 0 0 18px;
+      color: var(--text);
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 680px;
+      font-size: 1.1rem;
+      line-height: 1.75;
+    }
+
+    .hero-meta {
+      margin-top: 18px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      border-radius: 18px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      color: var(--text-soft);
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .pill strong {
+      color: var(--text);
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: minmax(0, 250px) minmax(0, 1fr);
+      gap: 28px;
+      padding: 24px 0 80px;
+      align-items: start;
+    }
+
+    .toc,
+    .lead-card,
+    .policy-card,
+    .cta-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .toc {
+      position: sticky;
+      top: 98px;
+      background: var(--toc-bg);
+      padding: 20px;
+    }
+
+    .toc-title {
+      margin: 0 0 16px;
+      color: var(--text);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .toc nav {
+      display: grid;
+      gap: 8px;
+    }
+
+    .toc a {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.45;
+      transition: 0.2s ease;
+    }
+
+    .toc a:hover,
+    .toc a.active {
+      color: var(--text);
+      background: var(--accent-soft);
+      border-color: var(--border-strong);
+    }
+
+    .lead-card,
+    .policy-card,
+    .cta-card {
+      padding: 28px;
+    }
+
+    .lead-card {
+      margin-bottom: 18px;
+    }
+
+    .lead-card h2,
+    .cta-card h2 {
+      margin: 0 0 12px;
+      color: var(--text);
+      font-size: 1.35rem;
+    }
+
+    .cards {
+      display: grid;
+      gap: 18px;
+    }
+
+    .policy-card {
+      transition: transform 0.24s ease, border-color 0.24s ease;
+    }
+
+    .policy-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-strong);
+    }
+
+    .section-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .section-number {
+      flex: 0 0 auto;
+      width: 42px;
+      height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
+      color: #ffffff;
+      font-family: "Sora", sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      box-shadow: 0 12px 24px rgba(55, 125, 255, 0.24);
+    }
+
+    .policy-card h3 {
+      margin: 2px 0 0;
+      color: var(--text);
+      font-size: 1.2rem;
+      line-height: 1.3;
+    }
+
+    .policy-card p,
+    .lead-card p,
+    .cta-card p {
+      margin: 0;
+      line-height: 1.85;
+    }
+
+    .policy-card p + p,
+    .policy-card ul {
+      margin-top: 14px;
+    }
+
+    .policy-card ul {
+      padding-left: 20px;
+    }
+
+    .policy-card li {
+      margin: 8px 0;
+      line-height: 1.75;
+    }
+
+    .inline-link {
+      color: var(--accent);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .cta-card {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .cta-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
+      color: #ffffff;
+      font-size: 0.94rem;
+      font-weight: 700;
+      min-width: 180px;
+    }
+
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0 36px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .footer-copy,
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 940px) {
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      .toc {
+        position: static;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-inner,
+      .hero,
+      .content,
+      .footer-inner {
+        width: min(1120px, calc(100% - 24px));
+      }
+
+      .hero {
+        padding-top: 68px;
+      }
+
+      .lead-card,
+      .policy-card,
+      .cta-card {
+        padding: 22px;
+      }
+
+      .section-number {
+        width: 38px;
+        height: 38px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-grid">
+    <nav class="nav">
+      <div class="nav-inner">
+        <div class="brand-wrap">
+          <a class="back-link" href="../">Back to CSQuiz</a>
+          <div>
+            <div class="brand">CSQuiz</div>
+            <div class="brand-sub">Nirvion Labs legal center</div>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="../privacy-policy/" aria-current="page">Privacy</a>
+          <a href="../terms-of-service/">Terms</a>
+          <a href="mailto:nirvionlabs@gmail.com">Contact</a>
+  
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy reveal">
+        <div class="chip-row">
+          <span class="chip">Privacy Policy</span>
+          <span class="chip">Last updated March 2026</span>
+        </div>
+        <h1>How CSQuiz handles your data, clearly and honestly.</h1>
+        <p>
+          CSQuiz is built to work without accounts and without collecting personal information.
+          This page explains what data stays on your device, when the app needs an internet
+          connection, and which third-party services may process limited device data.
+        </p>
+        <div class="hero-meta">
+          <span class="pill"><strong>Local first:</strong> progress stays on your device</span>
+          <span class="pill"><strong>No login:</strong> no accounts, usernames, or profiles</span>
+          <span class="pill"><strong>Transparent:</strong> ads and analytics are listed below</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <aside class="toc reveal">
+        <p class="toc-title">Contents</p>
+        <nav>
+          <a href="#privacy-1">1. Internet Connection Requirement</a>
+          <a href="#privacy-2">2. Information We Collect</a>
+          <a href="#privacy-3">3. Advertising</a>
+          <a href="#privacy-4">4. Third-Party Services</a>
+          <a href="#privacy-5">5. Content Downloads</a>
+          <a href="#privacy-6">6. No Account Required</a>
+          <a href="#privacy-7">7. Local Data Storage</a>
+          <a href="#privacy-8">8. Data Deletion</a>
+          <a href="#privacy-9">9. Children's Privacy</a>
+          <a href="#privacy-10">10. Changes to This Policy</a>
+          <a href="#privacy-11">11. Contact Us</a>
+        </nav>
+      </aside>
+
+      <section>
+        <article class="lead-card reveal">
+          <h2>Your privacy is the default setting.</h2>
+          <p>
+            CSQuiz is designed so that studying works without identity-based features. The app
+            stores your attempts, bookmarks, scores, and streaks locally on your own device. We do
+            not ask for your name, email address, or phone number, and we do not create an account
+            behind the scenes.
+          </p>
+        </article>
+
+        <div class="cards">
+          <article class="policy-card reveal" id="privacy-1" data-section>
+            <div class="section-head"><span class="section-number">01</span><h3>Internet Connection Requirement</h3></div>
+            <p>
+              CSQuiz needs an internet connection to download MCQ subjects, check for content
+              updates, and load certain services such as advertisements. If the device stays
+              offline for an extended period, the app may request an internet connection before
+              continuing so it can confirm content integrity and operate correctly.
+            </p>
+          </article>
+
+          <article class="policy-card reveal" id="privacy-2" data-section>
+            <div class="section-head"><span class="section-number">02</span><h3>Information We Collect</h3></div>
+            <p>
+              We do not collect, store, or transmit personally identifiable information. CSQuiz
+              does not require account creation, a name, an email address, or a phone number.
+            </p>
+            <p>
+              On first install, the app generates an anonymous random identifier (UUID) and stores
+              it on your device. That identifier does not contain personal information and is used
+              only for anonymous crash reporting.
+            </p>
+            <p>
+              Your study progress, including answered questions, test scores, bookmarks, and daily
+              streaks, stays exclusively on your device in encrypted local storage.
+            </p>
+          </article>
+
+          <article class="policy-card reveal" id="privacy-3" data-section>
+            <div class="section-head"><span class="section-number">03</span><h3>Advertising</h3></div>
+            <p>
+              CSQuiz uses Google AdMob to display advertisements. AdMob may process your device's
+              advertising identifier, cookies, and other device-level data to serve personalized or
+              non-personalized ads under Google's own privacy rules.
+            </p>
+            <p>
+              Advertisements are not shown during the first 48 hours after installation. You can
+              opt out of personalized advertising at any time through your device settings.
+            </p>
+          </article>
+
+          <article class="policy-card reveal" id="privacy-4" data-section>
+            <div class="section-head"><span class="section-number">04</span><h3>Third-Party Services</h3></div>
+            <p>
+              The app uses third-party services that may process limited device information under
+              their own privacy policies:
+            </p>
+            <ul>
+              <li>Google AdMob for advertising</li>
+              <li>Google Play Services for core Android support services</li>
+              <li>Google Firebase Analytics for anonymous usage analytics</li>
+              <li>Google Firebase Crashlytics for crash and error reporting</li>
+            </ul>
+            <p>
+              You can review Google's privacy terms at
+              <a class="inline-link" href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">policies.google.com/privacy</a>.
+            </p>
+          </article>
+
+          <article class="policy-card reveal" id="privacy-5" data-section>
+            <div class="section-head"><span class="section-number">05</span><h3>Content Downloads</h3></div>
+            <p>
+              When you download MCQ subjects, the app sends a request to our secure server with
+              only the requested subject identifier. No personal data, device identifiers, or
+              location data are included in that request.
+            </p>
+            <p>
+              Downloaded subject content is stored on your device in encrypted form. The app uses
+              RSA key exchange and AES-256 symmetric encryption so that subject files cannot be
+              read or extracted outside the app.
+            </p>
+          </article>
+
+          <article class="policy-card reveal" id="privacy-6" data-section>
+            <div class="section-head"><span class="section-number">06</span><h3>No Account Required</h3></div>
+            <p>
+              CSQuiz does not require registration or sign-in. There are no user accounts,
+              usernames, passwords, or personal profiles associated with the app.
+            </p>
+          </article>
+
+          <article class="policy-card reveal" id="privacy-7" data-section>
+            <div class="section-head"><span class="section-number">07</span><h3>Local Data Storage</h3></div>
+            <p>The following information is stored locally on your device and not sent to our servers:</p>
+            <ul>
+              <li>Downloaded MCQ subject content</li>
+              <li>Your attempt history and answer records</li>
+              <li>Test scores and saved results</li>
+              <li>Bookmarked questions</li>
+              <li>Daily study streak data</li>
+              <li>App theme preference</li>
+              <li>The anonymous UUID used for crash reporting</li>
+            </ul>
+          </article>
+
+          <article class="policy-card reveal" id="privacy-8" data-section>
+            <div class="section-head"><span class="section-number">08</span><h3>Data Deletion</h3></div>
+            <p>
+              You can clear your progress data, including attempts, bookmarks, and streaks, from
+              the app's settings. To remove all locally stored data, including downloaded subject
+              content, uninstall the app from your device.
+            </p>
+          </article>
+
+          <article class="policy-card reveal" id="privacy-9" data-section>
+            <div class="section-head"><span class="section-number">09</span><h3>Children's Privacy</h3></div>
+            <p>
+              CSQuiz is designed for students studying computer science subjects and is not directed
+              toward children under 13. We do not knowingly collect personal information from
+              children, and the app does not require personal information from any user.
+            </p>
+          </article>
+
+          <article class="policy-card reveal" id="privacy-10" data-section>
+            <div class="section-head"><span class="section-number">10</span><h3>Changes to This Policy</h3></div>
+            <p>
+              We may update this Privacy Policy from time to time. When we do, the revised policy
+              will be posted on this page. Continued use of the app after a published update means
+              you accept the revised policy.
+            </p>
+          </article>
+
+          <article class="policy-card reveal" id="privacy-11" data-section>
+            <div class="section-head"><span class="section-number">11</span><h3>Contact Us</h3></div>
+            <p>
+              If you have questions about this Privacy Policy, contact us at
+              <a class="inline-link" href="mailto:nirvionlabs@gmail.com">nirvionlabs@gmail.com</a>.
+              You can also use the Send Feedback option in the CSQuiz settings menu.
+            </p>
+          </article>
+        </div>
+
+        <article class="cta-card reveal">
+          <div>
+            <h2>Need the usage rules too?</h2>
+            <p>
+              The Privacy Policy explains data handling. For app usage rules, intellectual property,
+              and liability terms, read the dedicated Terms of Service page.
+            </p>
+          </div>
+          <a class="cta-link" href="../terms-of-service/">Open Terms of Service</a>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-copy">CSQuiz by Nirvion Labs. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="../">CSQuiz Home</a>
+          <a href="../privacy-policy/">Privacy Policy</a>
+          <a href="../terms-of-service/">Terms of Service</a>
+          <a href="mailto:nirvionlabs@gmail.com">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const root = document.documentElement;
+    const themeToggle = document.getElementById("themeToggle");
+    const storedTheme = localStorage.getItem("csmcq-legal-theme");
+
+    if (storedTheme === "light" || storedTheme === "dark") {
+      root.setAttribute("data-theme", storedTheme);
+    }
+
+    function toggleTheme() {
+      const nextTheme = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+      root.setAttribute("data-theme", nextTheme);
+      localStorage.setItem("csmcq-legal-theme", nextTheme);
+    }
+
+    themeToggle?.addEventListener("click", toggleTheme);
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add("visible");
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+
+    document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
+
+    const tocLinks = [...document.querySelectorAll(".toc a")];
+    const sections = [...document.querySelectorAll("[data-section]")];
+
+    function updateActiveSection() {
+      let activeId = sections[0]?.id;
+      sections.forEach((section) => {
+        if (section.getBoundingClientRect().top <= 160) activeId = section.id;
+      });
+      tocLinks.forEach((link) => {
+        link.classList.toggle("active", link.getAttribute("href") === `#${activeId}`);
+      });
+    }
+
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    updateActiveSection();
+  </script>
+</body>
+</html>
